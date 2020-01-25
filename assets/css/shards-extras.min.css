@@ -1,3 +1,4 @@
+/* Home */
 .shards-landing-page--1 .welcome {
   position: relative;
   height: 70vh;
@@ -55,6 +56,67 @@
   background: #f9fafc;
 }
 .shards-landing-page--1 .testimonials .avatar {
+  max-width: 80px;
+  overflow: hidden;
+}
+/*# sourceMappingURL=shards-extras.min.css.map */
+
+/* Student Login */
+.shards-signup .welcome {
+  position: relative;
+  height: 80vh;
+  min-height: 700px;
+}
+/* .shards-signup .welcome:before {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+  background: #007bff;
+} */
+@media (max-width: 767.98px) {
+  .shards-signup .welcome .inner-wrapper {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .shards-signup .welcome .welcome-heading {
+    font-size: 2.415rem;
+  }
+}
+.shards-signup .section-title {
+  position: relative;
+}
+/* .shards-signup .section-title:after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: #007bff;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: -20px;
+} */
+.shards-signup .feature .icon {
+  border-radius: 50%;
+  min-width: 65px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(33, 37, 41, 0.1), 0 7px 14px rgba(33, 37, 41, 0.1);
+  font-size: 27px;
+}
+.shards-signup .section {
+  border-bottom: 1px solid #eaebed;
+}
+.shards-signup .section-invert {
+  background: #f9fafc;
+}
+.shards-signup .testimonials .avatar {
   max-width: 80px;
   overflow: hidden;
 }

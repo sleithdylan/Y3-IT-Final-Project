@@ -17,12 +17,12 @@
   <link rel="stylesheet" href="assets/css/shards-extras.min.css?version=3.0.0">
 </head>
 
-<body class="shards-landing-page--1">
+<body class="shards-signup">
   <!-- Welcome Section -->
   <div class="welcome d-flex justify-content-center flex-column">
-    <div class="container">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-dark pt-3 px-0">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary pt-3 px-0">
+      <div class="container">
         <a class="navbar-brand" href="#">
           <img src="assets/images/agency-landing/shards-logo-white.svg" class="mr-2" alt="Shards - Agency Landing Page">
           Shards Agency
@@ -34,10 +34,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="./index.php">Home</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#our-services">How It Works</a>
+              <a class="nav-link" href="#">How It Works</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Internships</a>
@@ -50,8 +50,8 @@
                 Students
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Log in</a>
-                <a class="dropdown-item" href="./studentsignup.php">Get Started</a>
+                <a class="dropdown-item" href="./studentlogin.php">Log in</a>
+                <a class="dropdown-item" href="#">Get Started</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -66,98 +66,47 @@
             </li>
           </ul>
         </div>
-      </nav>
-      <!-- / Navigation -->
-    </div> <!-- .container -->
+      </div>
+    </nav>
+    <!-- / Navigation -->
 
     <!-- Inner Wrapper -->
-    <div class="d-flex flex-column inner-wrapper mt-auto mb-auto container">
+    <div class="d-flex flex-column inner-wrapper justify-contents-center mt-auto mb-auto container">
       <div class="row">
-        <div class="col-5 mb-3">
-          <h1 class="welcome-heading h1 display-3 text-white">Intern.</h1>
-          <p class="h6 text-white">Search for internships online to find the next step in your career.</p>
+        <div class="col-md-8 mb-3 text-center mx-auto">
+          <h3 class="welcome-heading h3 text-black">Sign Up</h3>
+          <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, iste.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-5">
-          <div class="input-group input-group-seamless">
-            <input type="text" class="form-control" id="form2-password" placeholder="Search..">
-            <span class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-search"></i>
-              </span>
-            </span>
+        <div class="col-md-8 mx-auto">
+          <div class="card w-100">
+            <div class="card-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputName4">Name</label>
+                    <input type="text" class="form-control" id="inputName4" placeholder="Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-primary">Sign up</button>
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="col-md">
-          <a href="#">
-            <button type="button" class="btn btn-outline-white">Find Internships</button>
-          </a>
         </div>
       </div>
     </div>
     <!-- / Inner Wrapper -->
   </div>
   <!-- / Welcome Section -->
-
-  <!-- Our Services Section -->
-  <div id="our-services" class="our-services section py-4">
-    <h5 class="text-center mt-5">How It Works</h5>
-    <!-- Features -->
-    <div class="features py-5">
-      <div class="container">
-        <div class="row">
-          <div class="feature py-4 col-md-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="icon text-primary"><i class="fa fa-binoculars"></i></div>
-            <div class="px-3 py-4">
-              <h5 class="text-center">Find Internship</h5>
-              <p class="text-center">Pellentesque sit amet libero vitae nibh imperdiet dictum at tempor ipsum.</p>
-            </div>
-          </div>
-          <div class="feature py-4 col-md-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="icon text-primary"><i class="fas fa-clipboard-check"></i></div>
-            <div class="px-3 py-4">
-              <h5 class="text-center">Apply</h5>
-              <p class="text-center">Mauris iaculis tristique lacus eu tincidunt. Duis ac leo vel est dictum consequat
-              </p>
-            </div>
-          </div>
-          <div class="feature py-4 col-md-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="icon text-primary"> <i class="fas fa-handshake"></i></div>
-            <div class="px-3 py-4">
-              <h5 class="text-center">Get Hired</h5>
-              <p class="text-center">Donec tristique nisl et molestie aliquet. Praesent sit amet mauris porta augue
-                congue.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- / Features -->
-  </div>
-  <!-- / Our Services Section -->
-
-  <!-- Our Blog Section -->
-  <div class="blog section section-invert py-4">
-    <h5 class="text-center mt-5">Get Started</h5>
-
-    <div class="container text-center mb-5">
-      <div class="py-5">
-        <div class="row">
-          <div class="col-md-7 mx-auto">
-            <h3 class="welcome-heading h3 mb-3">Start searching for internships for free</h3>
-            <p>Duis aliquam aliquam pharetra. Aenean volutpat felis dolor, ac vestibulum nunc fermentum
-              at. Ut egestas auctor sapien eget bibendum. Vestibulum id rhoncus eros. Suspendisse ut urna augue.
-            </p>
-            <a href="#">
-              <button type="button" class="btn btn-primary">Get Started</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- / Our Blog Section -->
 
   <!-- Footer Section -->
   <footer>
