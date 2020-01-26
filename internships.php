@@ -19,7 +19,7 @@
 
 <body class="shards-signup">
   <!-- Welcome Section -->
-  <div class="welcome d-flex justify-content-center flex-column">
+  <div class="d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary pt-3 px-0">
       <div class="container">
@@ -69,45 +69,46 @@
       </div>
     </nav>
     <!-- / Navigation -->
-
-    <!-- Inner Wrapper -->
-    <div class="d-flex flex-column inner-wrapper justify-contents-center mt-auto mb-auto container">
-      <div class="row">
-        <div class="col-md-8 mb-3 text-center mx-auto">
-          <h3 class="welcome-heading h3 text-black">Sign Up</h3>
-          <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, iste.</p>
-        </div>
+  </div>
+  <!-- / Welcome Section -->
+  <div class="d-flex flex-column my-5 inner-wrapper justify-contents-center container">
+    <div class="row">
+      <div class="col-md-12 text-left mx-auto">
+        <h4 class="h4 text-black">Current Internships</h4>
+        <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, iste.</p>
       </div>
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <div class="card w-100">
-            <div class="card-body">
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputName4">Name</label>
-                    <input type="text" class="form-control" id="inputName4" placeholder="Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                </div>
-                <button type="submit" class="btn btn-primary">Sign up</button>
-              </form>
-            </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="cardDiv" class="card my-4">
+          <div id="cardPost" class="card-body">
+            <h4>Role</h4>
+            <h5>Company</h5>
+            <h6>Location</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente fuga impedit. Inventore laborum
+              temporibus quam aliquam. Laborum dolorum consequatur voluptas, dicta illo, officiis quisquam mollitia nemo
+              natus consectetur consequuntur neque iste? Architecto beatae impedit iste officiis nulla...</p>
+            <a href="#">
+              <button type="button" class="btn btn-primary disabled">View More</button>
+            </a>
+          </div>
+        </div>
+        <div id="cardDiv" class="card my-4">
+          <div id="cardPost" class="card-body">
+            <h4>Role</h4>
+            <h5>Company</h5>
+            <h6>Location</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente fuga impedit. Inventore laborum
+              temporibus quam aliquam. Laborum dolorum consequatur voluptas, dicta illo, officiis quisquam mollitia nemo
+              natus consectetur consequuntur neque iste? Architecto beatae impedit iste officiis nulla...</p>
+            <a href="#">
+              <button type="button" class="btn btn-primary disabled">View More</button>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <!-- / Inner Wrapper -->
   </div>
-  <!-- / Welcome Section -->
-
   <!-- Footer Section -->
   <footer>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -174,6 +175,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

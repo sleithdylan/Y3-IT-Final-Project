@@ -23,9 +23,9 @@
     <div class="container">
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark pt-3 px-0">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./index.php">
           <img src="assets/images/agency-landing/shards-logo-white.svg" class="mr-2" alt="Shards - Agency Landing Page">
-          Shards Agency
+          Intern.
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
               <a class="nav-link" href="#our-services">How It Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Internships</a>
+              <a class="nav-link" href="./internships.php">Internships</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
@@ -79,16 +79,6 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-5">
-          <div class="input-group input-group-seamless">
-            <input type="text" class="form-control" id="form2-password" placeholder="Search..">
-            <span class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-search"></i>
-              </span>
-            </span>
-          </div>
-        </div>
         <div class="col-md">
           <a href="#">
             <button type="button" class="btn btn-outline-white">Find Internships</button>
