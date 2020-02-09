@@ -40,7 +40,7 @@
               <a class="nav-link" href="./index.php#our-services">How It Works</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Internships</a>
+              <a class="nav-link" href="./internships.php">Internships</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
@@ -51,7 +51,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./studentlogin.php">Log in</a>
-                <a class="dropdown-item" href="#">Get Started</a>
+                <a class="dropdown-item" href="./studentsignup.php">Get Started</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -60,8 +60,8 @@
                 Employers
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Log in</a>
-                <a class="dropdown-item" href="#">Get Started</a>
+                <a class="dropdown-item" href="./employerlogin.php">Log in</a>
+                <a class="dropdown-item" href="./employersignup.php">Get Started</a>
               </div>
             </li>
           </ul>
@@ -110,59 +110,62 @@
     </div>
   </div>
   <!-- Footer Section -->
-  <footer>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container py-5">
+  <footer class="footer-area bg-primary">
+    <div class="footer-big py-5">
+      <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <a class="navbar-brand" href="#">Intern.</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          <div class="col-md-7">
+            <a class="navbar-brand text-white" href="#">Intern.</a>
           </div>
-          <div class="col-md-3">
-            <ul class="navbar-nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
+          <div class="col-md col-sm-4">
+            <div class="footer-widget">
+              <div class="footer-menu">
+                <h4 class="footer-widget-title text-white">Our Company</h4>
+                <ul>
+                  <li>
+                    <a href="#">How It Works</a>
+                  </li>
+                  <li>
+                    <a href="#">Internships</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3">
-            <ul class="navbar-nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
+          <div class="col-md col-sm-4">
+            <div class="footer-widget">
+              <div class="footer-menu no-padding">
+                <h4 class="footer-widget-title text-white">Legal</h4>
+                <ul>
+                  <li>
+                    <a href="#">Terms & Conditions</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#">GDPR</a>
+                  </li>
+                  <li>
+                    <a href="#">Disclaimer</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3">
-            <ul class="navbar-nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md col-sm-4 d-flex justify-content-end">
+            <a class="text-white" href="#twitter">
+              <i class="fab fa-twitter-square fa-lg"></i>
+            </a>
+            <a class="text-white" href="#twitter">
+              <i class="fab fa-facebook-square fa-lg pl-3"></i>
+            </a>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   </footer>
   <!-- / Footer Section -->
 
