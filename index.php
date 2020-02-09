@@ -50,7 +50,7 @@
                 Students
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Log in</a>
+                <a class="dropdown-item" href="./studentlogin.php">Log in</a>
                 <a class="dropdown-item" href="./studentsignup.php">Get Started</a>
               </div>
             </li>
@@ -60,8 +60,8 @@
                 Employers
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Log in</a>
-                <a class="dropdown-item" href="#">Get Started</a>
+                <a class="dropdown-item" href="./employerlogin.php">Log in</a>
+                <a class="dropdown-item" href="./employersignup.php">Get Started</a>
               </div>
             </li>
           </ul>
@@ -80,7 +80,7 @@
       </div>
       <div class="row">
         <div class="col-md">
-          <a href="#">
+          <a href="./internships.php">
             <button type="button" class="btn btn-outline-white">Find Internships</button>
           </a>
         </div>
@@ -139,7 +139,7 @@
             <p>Duis aliquam aliquam pharetra. Aenean volutpat felis dolor, ac vestibulum nunc fermentum
               at. Ut egestas auctor sapien eget bibendum. Vestibulum id rhoncus eros. Suspendisse ut urna augue.
             </p>
-            <a href="#">
+            <a href="./studentsignup.php">
               <button type="button" class="btn btn-primary">Get Started</button>
             </a>
           </div>
@@ -151,52 +151,47 @@
 
   <!-- Footer Section -->
   <footer>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container py-5">
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container py-5 d-flex justify-content-between align-items-start">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md">
             <a class="navbar-brand" href="#">Intern.</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div class="col-md-3">
+        </div>
+        <div class="d-flex">
+          <div class="col-md">
             <ul class="navbar-nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#our-services">How It Works</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="navbar-nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="./internships.php">Internships</a>
               </li>
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="col-md">
             <ul class="navbar-nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
+                <a class="nav-link active" href="#">Legal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Terms & Conditions</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Privacy Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">GDPR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Disclaimer</a>
               </li>
             </ul>
           </div>
