@@ -159,7 +159,7 @@
                 <a class="nav-link active disabled" href="#">Company</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#our-services">How It Works</a>
+                <a class="nav-link" href="./index.php#our-services">How It Works</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./internships.php">Internships</a>
@@ -172,16 +172,13 @@
                 <a class="nav-link active disabled" href="#">Legal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Terms & Conditions</a>
+                <a class="nav-link" href="./terms.php">Terms & Conditions</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Privacy Policy</a>
+                <a class="nav-link" href="./privacy.php">Privacy Policy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">GDPR</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Disclaimer</a>
+                <a class="nav-link" href="./disclaimer.php">Disclaimer</a>
               </li>
             </ul>
           </div>

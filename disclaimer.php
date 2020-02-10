@@ -17,7 +17,7 @@
 </head>
 
 <body class="shards-signup">
-  <div class="welcome d-flex justify-content-center flex-column">
+  <div class="d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary pt-3 px-0">
       <div class="container">
@@ -37,7 +37,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./index.php#our-services">How It Works</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="./internships.php">Internships</a>
             </li>
           </ul>
@@ -66,37 +66,43 @@
         </div>
       </div>
     </nav>
-    <div class="d-flex flex-column inner-wrapper justify-contents-center mt-auto mb-auto container">
-      <div class="row">
-        <div class="col-md-8 mb-3 text-center mx-auto">
-          <h3 class="welcome-heading h3 text-black">Sign Up</h3>
-          <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, iste.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto">
-          <div class="card w-100">
-            <div class="card-body">
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputName4">Name</label>
-                    <input type="text" class="form-control" id="inputName4" placeholder="Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                </div>
-                <button type="submit" class="btn btn-primary">Sign up</button>
-              </form>
-            </div>
-          </div>
-        </div>
+  </div>
+  <div class="d-flex flex-column my-5 inner-wrapper justify-contents-center container">
+    <div class="row">
+      <div class="col-md-12 text-left mx-auto">
+        <h2>Disclaimer for StudentHired</h2>
+
+        <p>If you require any more information or have any questions about our site's disclaimer, please feel free to
+          contact us by email at support@studenthired.com</p>
+
+        <h3>Disclaimers for StudentHired</h3>
+
+        <p>All the information on this website - https://www.studenthired.com - is published in good faith and for
+          general information purpose only. StudentHired does not make any warranties about the completeness,
+          reliability and accuracy of this information. Any action you take upon the information you find on this
+          website (StudentHired), is strictly at your own risk. StudentHired will not be liable for any losses and/or
+          damages in connection with the use of our website. Our Disclaimer was generated with the help of the <a
+            href="https://www.disclaimergenerator.net/">Disclaimer Generator</a> and the <a
+            href="https://www.disclaimer-generator.com.com">Disclaimer Generator</a>.</p>
+
+        <p>From our website, you can visit other websites by following hyperlinks to such external sites. While we
+          strive to provide only quality links to useful and ethical websites, we have no control over the content and
+          nature of these sites. These links to other websites do not imply a recommendation for all the content found
+          on these sites. Site owners and content may change without notice and may occur before we have the opportunity
+          to remove a link which may have gone 'bad'.</p>
+
+        <p>Please be also aware that when you leave our website, other sites may have different privacy policies and
+          terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as
+          their "Terms of Service" before engaging in any business or uploading any information.</p>
+
+        <h3>Consent</h3>
+
+        <p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+
+        <h3>Update</h3>
+
+        <p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.
+        </p>
       </div>
     </div>
   </div>
@@ -161,6 +167,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
