@@ -4,28 +4,26 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Intern. - Search for internships online to find the next step in your career.</title>
+  <title>StudentHired - Search for internships online to find the next step in your career.</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS Dependencies -->
+  <!-- Stylesheets -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <script src="https://kit.fontawesome.com/1d6b99454b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/shards.min.css?v=3.0.0">
   <link rel="stylesheet" href="assets/css/shards-extras.min.css?version=3.0.0">
 </head>
 
 <body class="shards-landing-page--1">
-  <!-- Welcome Section -->
   <div class="welcome d-flex justify-content-center flex-column">
     <div class="container">
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark pt-3 px-0">
         <a class="navbar-brand" href="./index.php">
-          <img src="assets/images/agency-landing/shards-logo-white.svg" class="mr-2" alt="Shards - Agency Landing Page">
-          Intern.
+          <!-- <img src="assets/images/agency-landing/shards-logo-white.svg" class="mr-2"> -->
+          StudentHired
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,14 +65,11 @@
           </ul>
         </div>
       </nav>
-      <!-- / Navigation -->
-    </div> <!-- .container -->
-
-    <!-- Inner Wrapper -->
+    </div>
     <div class="d-flex flex-column inner-wrapper mt-auto mb-auto container">
       <div class="row">
-        <div class="col-5 mb-3">
-          <h1 class="welcome-heading h1 display-3 text-white">Intern.</h1>
+        <div class="col-md-6 col-sm-12 mb-3">
+          <h1 class="welcome-heading h1 display-3 text-white">StudentHired</h1>
           <p class="h6 text-white">Search for internships online to find the next step in your career.</p>
         </div>
       </div>
@@ -86,14 +81,10 @@
         </div>
       </div>
     </div>
-    <!-- / Inner Wrapper -->
   </div>
-  <!-- / Welcome Section -->
-
-  <!-- Our Services Section -->
+  <!-- How It Works -->
   <div id="our-services" class="our-services section py-4">
     <h5 class="text-center mt-5">How It Works</h5>
-    <!-- Features -->
     <div class="features py-5">
       <div class="container">
         <div class="row">
@@ -123,14 +114,10 @@
         </div>
       </div>
     </div>
-    <!-- / Features -->
   </div>
-  <!-- / Our Services Section -->
-
-  <!-- Our Blog Section -->
+  <!-- Get Started (Call-to-Action) -->
   <div class="blog section section-invert py-4">
     <h5 class="text-center mt-5">Get Started</h5>
-
     <div class="container text-center mb-5">
       <div class="py-5">
         <div class="row">
@@ -147,67 +134,62 @@
       </div>
     </div>
   </div>
-  <!-- / Our Blog Section -->
-
-  <footer class="footer-area bg-primary">
-    <div class="footer-big py-5">
-      <div class="container">
+  <!-- Footer -->
+  <footer>
+    <nav class="navbar-dark bg-primary">
+      <div class="container py-5">
         <div class="row">
-          <div class="col-md-7">
-            <a class="navbar-brand text-white" href="#">Intern.</a>
-          </div>
-          <div class="col-md col-sm-4">
-            <div class="footer-widget">
-              <div class="footer-menu">
-                <h4 class="footer-widget-title text-white">Our Company</h4>
-                <ul>
-                  <li>
-                    <a href="#">How It Works</a>
-                  </li>
-                  <li>
-                    <a href="#">Internships</a>
-                  </li>
-                </ul>
+          <div class="col-md-8">
+            <div class="d-flex flex-column">
+              <a class="navbar-brand mb-1" href="./index.php">StudentHired.</a>
+              <p class="text-white">&copy; StudentHired 2020 &ndash; All rights reserved.</p>
+              <div class="social mb-3">
+                <a class="text-white" href="https://twitter.com/studenthired">
+                  <i class="fab fa-twitter-square fa-lg"></i>
+                </a>
+                <a class="text-white" href="https://www.facebook.com/StudentHired-107639287471343/">
+                  <i class="fab fa-facebook-square fa-lg pl-3"></i>
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-md col-sm-4">
-            <div class="footer-widget">
-              <div class="footer-menu no-padding">
-                <h4 class="footer-widget-title text-white">Legal</h4>
-                <ul>
-                  <li>
-                    <a href="#">Terms & Conditions</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="#">GDPR</a>
-                  </li>
-                  <li>
-                    <a href="#">Disclaimer</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="col-md">
+            <ul class="navbar-nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active disabled" href="#">Company</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#our-services">How It Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./internships.php">Internships</a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-md col-sm-4 d-flex justify-content-end">
-            <a class="text-white" href="#twitter">
-              <i class="fab fa-twitter-square fa-lg"></i>
-            </a>
-            <a class="text-white" href="#twitter">
-              <i class="fab fa-facebook-square fa-lg pl-3"></i>
-            </a>
+          <div class="col-md">
+            <ul class="navbar-nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active disabled" href="#">Legal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Terms & Conditions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Privacy Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">GDPR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Disclaimer</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   </footer>
-
-  <!-- JavaScript Dependencies -->
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
