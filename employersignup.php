@@ -21,9 +21,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary pt-3 px-0">
       <div class="container">
-        <a class="navbar-brand" href="./index.php">
-          <!-- <img src="assets/images/agency-landing/shards-logo-white.svg" class="mr-2"> -->
-          StudentHired
+        <a class="navbar-brand mt-1" href="./index.php">
+          <img src="assets/images/agency-landing/studenthired-logo-white.svg" class="mr-2">
+          <span class="font-weight-bold">Student</span><span class="font-weight-light">Hired</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,7 +107,10 @@
         <div class="row">
           <div class="col-md-8">
             <div class="d-flex flex-column">
-              <a class="navbar-brand mb-1" href="./index.php">StudentHired.</a>
+              <a class="navbar-brand mb-2" href="./index.php">
+                <img src="assets/images/agency-landing/studenthired-logo-white.svg" class="mr-2">
+                <span class="font-weight-bold">Student</span><span class="font-weight-light">Hired</span>
+              </a>
               <p class="text-white">&copy; StudentHired 2020 &ndash; All rights reserved.</p>
               <div class="social mb-3">
                 <a class="text-white" href="https://twitter.com/studenthired">
