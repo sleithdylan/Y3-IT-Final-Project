@@ -102,6 +102,19 @@
             </a>
           </div>
         </div>
+        <div id="cardDiv" class="card my-4">
+          <div id="cardPost" class="card-body">
+            <h4>Role</h4>
+            <h5>Company</h5>
+            <h6>Location</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente fuga impedit. Inventore laborum
+              temporibus quam aliquam. Laborum dolorum consequatur voluptas, dicta illo, officiis quisquam mollitia nemo
+              natus consectetur consequuntur neque iste? Architecto beatae impedit iste officiis nulla...</p>
+            <a href="#">
+              <button type="button" class="btn btn-primary disabled">View More</button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
