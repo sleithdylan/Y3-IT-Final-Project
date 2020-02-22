@@ -74,25 +74,33 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto">
-          <div class="card w-100">
+        <div class="col-md-8 col-lg-6 mx-auto">
+          <div class="card">
             <div class="card-body">
               <form>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputName4">Name</label>
-                    <input type="text" class="form-control" id="inputName4" placeholder="Name">
+                  <div class="form-group col-md-12">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-12">
                     <label for="inputPassword4">Password</label>
                     <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <div class="d-flex">
+                  <button type="submit" class="btn btn-primary flex-grow-1"><a href="./employerdashboard.php"
+                      class="text-white">Log
+                      in</a></button>
                 </div>
-                <button type="submit" class="btn btn-primary">Log in</button>
+                <div class="d-flex justify-content-center mt-4">
+                  <h6>
+                    Don't have an account?
+                    <a href="./employersignup.php" class="text-primary">
+                      Sign up
+                    </a>
+                  </h6>
+                </div>
               </form>
             </div>
           </div>

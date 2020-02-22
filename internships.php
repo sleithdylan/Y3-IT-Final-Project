@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>StudentHired - Search for internships online to find the next step in your career.</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Readport" content="width=device-width, initial-scale=1">
 
   <!-- Stylesheets -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
@@ -85,7 +85,10 @@
               temporibus quam aliquam. Laborum dolorum consequatur voluptas, dicta illo, officiis quisquam mollitia nemo
               natus consectetur consequuntur neque iste? Architecto beatae impedit iste officiis nulla...</p>
             <a href="#">
-              <button type="button" class="btn btn-primary disabled">View More</button>
+              <button type="button" class="btn btn-light disabled mr-1">Read More</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary">Apply Now</button>
             </a>
           </div>
         </div>
@@ -98,7 +101,10 @@
               temporibus quam aliquam. Laborum dolorum consequatur voluptas, dicta illo, officiis quisquam mollitia nemo
               natus consectetur consequuntur neque iste? Architecto beatae impedit iste officiis nulla...</p>
             <a href="#">
-              <button type="button" class="btn btn-primary disabled">View More</button>
+              <button type="button" class="btn btn-light disabled mr-1">Read More</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary">Apply Now</button>
             </a>
           </div>
         </div>
@@ -111,7 +117,10 @@
               temporibus quam aliquam. Laborum dolorum consequatur voluptas, dicta illo, officiis quisquam mollitia nemo
               natus consectetur consequuntur neque iste? Architecto beatae impedit iste officiis nulla...</p>
             <a href="#">
-              <button type="button" class="btn btn-primary disabled">View More</button>
+              <button type="button" class="btn btn-light disabled mr-1">Read More</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary">Apply Now</button>
             </a>
           </div>
         </div>
