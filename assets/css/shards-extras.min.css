@@ -247,4 +247,21 @@ img {
   max-width: 80px;
   overflow: hidden;
 }
+
+.collapseExample p.collapse:not(.show) {
+  display: flex;
+  height: 2.65rem;
+  overflow: hidden;
+}
+/* 
+.collapseExample button.collapsed:after {
+  content: 'Read More';
+} */
+/* 
+.collapseExample button:not(.collapsed):before {
+  content: 'Read Less';
+} */
+.collapseExample .collapsing {
+  height: 3rem;
+}
 /*# sourceMappingURL=shards-extras.min.css.map */
