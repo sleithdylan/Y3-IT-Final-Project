@@ -15,13 +15,13 @@
               <img src="./assets/images/profile-pictures/profile-1.png" class="rounded-circle mb-3" alt="profile"
                 height="100" width="100">
               <div class="profile-info d-flex flex-column justify-content-center align-items-start ml-4">
-                <div class="about-title d-flex">
+                <div class="d-flex">
                   <h4 class="font-weight-bold mr-3">Glen Rouse</h4>
                 </div>
-                <div class="about-title d-flex">
+                <div class="d-flex">
                   <h6><i class="fas fa-briefcase align-middle mr-3"></i>Student</h6>
                 </div>
-                <div class="about-title d-flex">
+                <div class="d-flex">
                   <h6><i class="fas fa-map-marker-alt align-middle mr-3"></i>County Galway</h6>
                 </div>
               </div>
@@ -34,7 +34,7 @@
       <div class="col-md-8">
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="about-title d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
               <h5 class="mr-3">About Me</h5>
               <a href="#"><i class="fas fa-pen"></i></a>
             </div>
@@ -50,7 +50,7 @@
       <div class="col-md-4">
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="about-title d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
               <h5 class="mr-3">Contact Information</h5>
               <a href="#"><i class="fas fa-pen"></i></a>
             </div>
@@ -66,7 +66,7 @@
       <div class="col-md-8">
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="about-title d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
               <h5 class="mr-3">Experience</h5>
               <a href="#"><i class="fas fa-pen"></i></a>
             </div>
@@ -80,7 +80,7 @@
       <div class="col-md-4">
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="about-title d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
               <h5 class="mr-3">Websites</h5>
               <a href="#"><i class="fas fa-pen"></i></a>
             </div>
@@ -94,7 +94,7 @@
       <div class="col-md-8">
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="about-title d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
               <h5 class="mr-3">Skills</h5>
               <a href="#"><i class="fas fa-pen"></i></a>
             </div>
@@ -107,7 +107,7 @@
       <div class="col-md-8">
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="about-title d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
               <h5 class="mr-3">Education</h5>
               <a href="#"><i class="fas fa-pen"></i></a>
             </div>

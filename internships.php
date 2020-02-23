@@ -8,7 +8,7 @@
   </div>
   <div class="d-flex flex-column my-5 inner-wrapper justify-contents-center container">
     <div class="row">
-      <div class="col-md-12 text-left mx-auto">
+      <div class="col-md-12">
         <h4 class="h4 text-black">Current Internships</h4>
         <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, iste.</p>
       </div>
