@@ -3,10 +3,8 @@
 
 <body class="shards-landing-page--1">
   <div class="welcome d-flex justify-content-center flex-column">
-    <div class="container">
-      <!-- Navigation -->
-      <?php include('includes/nav_transparent.php'); ?>
-    </div>
+    <!-- Navigation -->
+    <?php include('includes/nav_transparent.php'); ?>
     <div class="d-flex flex-column inner-wrapper mt-auto mb-auto container">
       <div class="row">
         <div class="col-md-6 col-sm-12 mb-3">

@@ -11,7 +11,7 @@
       <div class="col-md-12">
         <div class="about-title d-flex justify-content-between align-items-end">
           <h5>Manage Your Jobs</h5>
-          <button type="submit" class="btn btn-primary"><a href="./studentdashboard.php" class="text-white">Add a
+          <button type="submit" class="btn btn-primary"><a href="#" class="text-white">Add a
               Job</a>
           </button>
         </div>
@@ -19,7 +19,10 @@
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-center">
               <h4 class="mr-3">Role</h4>
-              <a href="#"><i class="fas fa-pen"></i></a>
+              <div>
+                <a href="#"><i class="fas fa-pen mr-3"></i></a>
+                <a href="#"><i class="fas fa-trash text-danger"></i></a>
+              </div>
             </div>
             <h5>Company</h5>
             <h6>Location</h6>
@@ -35,7 +38,10 @@
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-center">
               <h4 class="mr-3">Role</h4>
-              <a href="#"><i class="fas fa-pen"></i></a>
+              <div>
+                <a href="#"><i class="fas fa-pen mr-3"></i></a>
+                <a href="#"><i class="fas fa-trash text-danger"></i></a>
+              </div>
             </div>
             <h5>Company</h5>
             <h6>Location</h6>
