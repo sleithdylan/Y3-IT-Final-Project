@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary pt-3 px-0">
   <div class="container">
     <a class="navbar-brand mt-1" href="./index.php">
-      <img src="assets/images/studenthired-logo-white.svg" class="mr-2">
+      <img src="assets/images/studenthired-logo-white.svg" class="mr-2 brand-logo">
       <span class="font-weight-bold">Student</span><span class="font-weight-light">Hired</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"

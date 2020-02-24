@@ -5,7 +5,7 @@
         <div class="col-md-8">
           <div class="d-flex flex-column">
             <a class="navbar-brand mb-2" href="./index.php">
-              <img src="assets/images/agency-landing/studenthired-logo-white.svg" class="mr-2">
+              <img src="assets/images/studenthired-logo-white.svg" class="mr-2">
               <span class="font-weight-bold">Student</span><span class="font-weight-light">Hired</span>
             </a>
             <p class="text-white">&copy; StudentHired 2020 &ndash; All rights reserved.</p>
