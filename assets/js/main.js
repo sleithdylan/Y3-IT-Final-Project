@@ -1,23 +1,32 @@
-// var con = 0;
-// var div = document.getElementById('cardDiv');
+// $(document).ready(function() {
+//   $('button').click(function() {
+//     $('p').removeClass('collapse');
+//   });
+// });
 
-// function getPost() {
-//   fetch('https://jsonplaceholder.typicode.com/posts')
-//     .then(response => {
-//       return response.json();
-//     })
-//     .then(post => {
-//       for (var index = 0; index < 2; index++) {
-//         div.innerHTML += '<h5>' + post[con].id + '</h5>';
-//         div.innerHTML += '<h6>' + post[con].title + '</h6>';
-//         div.innerHTML += '<p>' + post[con].body + '</p>';
+$(function() {
+  $('button').click(function() {
+    $(this)
+      .parent()
+      .parent()
+      .toggleClass('collapsed');
+    // $('.btn').html('Read Less');
+    $(this)
+      .parent()
+      .parent()
+      .find('.collapse')
+      .slideToggle();
+  });
+});
 
-//         con = con + 1;
-//       }
-//     })
-//     .catch(error => {
-//       console.log(error);
-//     });
-// }
-
-// getPost();
+// $('button').click(function() {
+//   if ($(this).hasClass('collapse')) {
+//     $(this)
+//       .removeClass('collapsed')
+//       // .addClass('circle_minus')
+//       .find('button')
+//       .text('Read Less');
+//   } else {
+//     // vice versa
+//   }
+// });

@@ -26,24 +26,22 @@
             </div>
             <h5>Company</h5>
             <h6>Location</h6>
-            <div class="collapseExample">
-              <p class="collapse" id="collapseExample">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
-                cumque amet iste quisquam deleniti molestiae harum animi, dolore impedit sequi illum aliquid consectetur
-                porro possimus dolorum. Dignissimos iste dolores ratione laboriosam quibusdam accusamus nisi eius esse
-                accusantium repellendus cumque, aut corrupti, distinctio repudiandae placeat? Similique cum, eos
-                tenetur, blanditiis quaerat, cupiditate natus obcaecati ipsa harum nihil cumque voluptatum? Porro
-                quaerat inventore mollitia eligendi perspiciatis dolores voluptas adipisci, ipsum officia minima. Sunt
-                id dolor assumenda blanditiis sequi minus illo impedit, molestiae dolorum, ea eius provident quis
-                voluptatibus iste libero eum nesciunt in eos? Et aspernatur minus delectus, voluptatem quasi dicta,
-                iusto consequatur voluptas ipsum velit modi tempora nobis est quidem dolore vitae tenetur accusamus nam.
-                Quaerat obcaecati magnam sunt in neque, temporibus consequuntur quae. Dignissimos est minima facere
-                omnis vero perspiciatis, corrupti pariatur numquam et magni ducimus? Doloremque eveniet similique ut
-                velit molestias pariatur voluptates illo nulla. Culpa deserunt exercitationem expedita!</p>
-              <a href="#">
-                <button type="button" class="btn btn-light mr-1" data-toggle="collapse" data-target="#collapseExample"
-                  aria-expanded="false" aria-controls="collapseExample">Read More</button>
-              </a>
-            </div>
+            <p class="collapse">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Culpa
+              cumque amet iste quisquam deleniti molestiae harum animi, dolore impedit sequi illum aliquid consectetur
+              porro possimus dolorum. Dignissimos iste dolores ratione laboriosam quibusdam accusamus nisi eius esse
+              accusantium repellendus cumque, aut corrupti, distinctio repudiandae placeat? Similique cum, eos
+              tenetur, blanditiis quaerat, cupiditate natus obcaecati ipsa harum nihil cumque voluptatum? Porro
+              quaerat inventore mollitia eligendi perspiciatis dolores voluptas adipisci, ipsum officia minima. Sunt
+              id dolor assumenda blanditiis sequi minus illo impedit, molestiae dolorum, ea eius provident quis
+              voluptatibus iste libero eum nesciunt in eos? Et aspernatur minus delectus, voluptatem quasi dicta,
+              iusto consequatur voluptas ipsum velit modi tempora nobis est quidem dolore vitae tenetur accusamus nam.
+              Quaerat obcaecati magnam sunt in neque, temporibus consequuntur quae. Dignissimos est minima facere
+              omnis vero perspiciatis, corrupti pariatur numquam et magni ducimus? Doloremque eveniet similique ut
+              velit molestias pariatur voluptates illo nulla. Culpa deserunt exercitationem expedita!</p>
+            <a href="#">
+              <button type="button" class="btn btn-light mr-1">Read More</button>
+            </a>
           </div>
         </div>
         <div id="cardDiv" class="card my-4">
@@ -57,11 +55,21 @@
             </div>
             <h5>Company</h5>
             <h6>Location</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente fuga impedit. Inventore laborum
-              temporibus quam aliquam. Laborum dolorum consequatur voluptas, dicta illo, officiis quisquam mollitia nemo
-              natus consectetur consequuntur neque iste? Architecto beatae impedit iste officiis nulla...</p>
+            <p class="collapse">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Culpa
+              cumque amet iste quisquam deleniti molestiae harum animi, dolore impedit sequi illum aliquid consectetur
+              porro possimus dolorum. Dignissimos iste dolores ratione laboriosam quibusdam accusamus nisi eius esse
+              accusantium repellendus cumque, aut corrupti, distinctio repudiandae placeat? Similique cum, eos
+              tenetur, blanditiis quaerat, cupiditate natus obcaecati ipsa harum nihil cumque voluptatum? Porro
+              quaerat inventore mollitia eligendi perspiciatis dolores voluptas adipisci, ipsum officia minima. Sunt
+              id dolor assumenda blanditiis sequi minus illo impedit, molestiae dolorum, ea eius provident quis
+              voluptatibus iste libero eum nesciunt in eos? Et aspernatur minus delectus, voluptatem quasi dicta,
+              iusto consequatur voluptas ipsum velit modi tempora nobis est quidem dolore vitae tenetur accusamus nam.
+              Quaerat obcaecati magnam sunt in neque, temporibus consequuntur quae. Dignissimos est minima facere
+              omnis vero perspiciatis, corrupti pariatur numquam et magni ducimus? Doloremque eveniet similique ut
+              velit molestias pariatur voluptates illo nulla. Culpa deserunt exercitationem expedita!</p>
             <a href="#">
-              <button type="button" class="btn btn-light disabled mr-1">Read More</button>
+              <button type="button" class="btn btn-light mr-1">Read More</button>
             </a>
           </div>
         </div>

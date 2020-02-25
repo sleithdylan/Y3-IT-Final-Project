@@ -248,22 +248,22 @@ img {
   overflow: hidden;
 }
 
-.collapseExample p.collapse:not(.show) {
+/* .card-body p.collapse:not(.show) {
   display: flex;
-  height: 2.65rem;
+  height: 3rem;
   overflow: hidden;
-}
-/* 
-.collapseExample button.collapsed:after {
-  content: 'Read More';
 } */
-/* 
-.collapseExample button:not(.collapsed):before {
+
+/* .card-body button.collapsed:after {
+  content: 'Read More';
+}
+
+.card-body button:not(.collapsed):before {
   content: 'Read Less';
 } */
-.collapseExample .collapsing {
+/* .collapseExample .collapsing {
   height: 3rem;
-}
+} */
 
 .brand-logo {
   border-radius: 50%;
