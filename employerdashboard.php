@@ -17,7 +17,7 @@
         </div>
         <div id="cardDiv" class="card my-4">
           <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-start">
               <h4 class="mr-3">Role</h4>
               <div>
                 <a href="#"><i class="fas fa-pen mr-3"></i></a>
@@ -48,7 +48,7 @@
         </div>
         <div id="cardDiv" class="card my-4">
           <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-start">
               <h4 class="mr-3">Role</h4>
               <div>
                 <a href="#"><i class="fas fa-pen mr-3"></i></a>
