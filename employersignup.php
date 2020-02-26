@@ -19,8 +19,9 @@
               <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="employer-name">Name</label>
-                    <input type="text" class="form-control" id="employer-name" name="employer-name" placeholder="Name">
+                    <label for="employer-fullname">Full Name</label>
+                    <input type="text" class="form-control" id="employer-fullname" name="employer-fullname"
+                      placeholder="Full Name">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="employer-email">Email</label>

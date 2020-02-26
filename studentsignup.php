@@ -19,8 +19,9 @@
               <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="student-name">Name</label>
-                    <input type="text" class="form-control" id="student-name" name="student-name" placeholder="Name">
+                    <label for="student-fullname">Full Name</label>
+                    <input type="text" class="form-control" id="student-fullname" name="student-fullname"
+                      placeholder="Full Name">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="student-email">Email</label>
