@@ -1,7 +1,7 @@
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
-<body class="shards-signup">
+<body>
   <div class="d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <?php include('includes/nav_employer.php'); ?>
@@ -11,7 +11,7 @@
       <div class="col-md-12">
         <div class="about-title d-flex justify-content-between align-items-end">
           <h5>Manage Your Jobs</h5>
-          <button type="submit" class="btn btn-primary"><a href="#" class="text-white">Add a
+          <button type="submit" class="btn btn-primary"><a href="./addjob.php" class="text-white">Add a
               Job</a>
           </button>
         </div>
@@ -40,7 +40,7 @@
               omnis vero perspiciatis, corrupti pariatur numquam et magni ducimus? Doloremque eveniet similique ut
               velit molestias pariatur voluptates illo nulla. Culpa deserunt exercitationem expedita!</p>
             <a href="#">
-              <button type="button" class="btn btn-light mr-1">Read More</button>
+              <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
             </a>
           </div>
         </div>
@@ -69,7 +69,7 @@
               omnis vero perspiciatis, corrupti pariatur numquam et magni ducimus? Doloremque eveniet similique ut
               velit molestias pariatur voluptates illo nulla. Culpa deserunt exercitationem expedita!</p>
             <a href="#">
-              <button type="button" class="btn btn-light mr-1">Read More</button>
+              <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
             </a>
           </div>
         </div>

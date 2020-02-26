@@ -1,7 +1,7 @@
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
-<body class="shards-signup">
+<body class="login">
   <div class="welcome d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <?php include('includes/nav.php'); ?>
@@ -19,25 +19,25 @@
               <form>
                 <div class="form-row">
                   <div class="form-group col-md-12">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <label for="student-email">Email</label>
+                    <input type="email" class="form-control" id="student-email" name="student-email"
+                      placeholder="Email">
                   </div>
                   <div class="form-group col-md-12">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <label for="student-password">Password</label>
+                    <input type="password" class="form-control" id="student-password" name="student-password"
+                      placeholder="Password">
                   </div>
                 </div>
                 <div class="d-flex">
-                  <button type="submit" class="btn btn-primary flex-grow-1"><a href="./studentdashboard.php"
-                      class="text-white">Log
-                      in</a></button>
+                  <button type="submit" name="login" class="btn btn-primary flex-grow-1">
+                    <a href="./studentdashboard.php" class="text-white">Log in</a>
+                  </button>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
                   <h6>
                     Don't have an account?
-                    <a href="./studentsignup.php" class="text-primary">
-                      Sign up
-                    </a>
+                    <a href="./studentsignup.php" class="text-primary">Sign up</a>
                   </h6>
                 </div>
               </form>

@@ -1,7 +1,7 @@
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
-<body class="shards-signup">
+<body>
   <div class="d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <?php include('includes/nav.php'); ?>

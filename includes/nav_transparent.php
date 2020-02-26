@@ -14,7 +14,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#our-services">How It Works</a>
+          <a class="nav-link" href="#how-it-works">How It Works</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./internships.php">Internships</a>

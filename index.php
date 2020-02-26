@@ -1,7 +1,7 @@
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
-<body class="shards-landing-page--1">
+<body class="landing">
   <div class="welcome d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <?php include('includes/nav_transparent.php'); ?>
@@ -22,7 +22,7 @@
     </div>
   </div>
   <!-- How It Works -->
-  <div id="our-services" class="our-services section py-4">
+  <div id="how-it-works" class="section py-4">
     <h5 class="text-center mt-5">How It Works</h5>
     <div class="features py-5">
       <div class="container">
@@ -55,7 +55,7 @@
     </div>
   </div>
   <!-- Get Started (Call-to-Action) -->
-  <div class="blog section section-invert py-4">
+  <div class="section section-invert py-4">
     <h5 class="text-center mt-5">Get Started</h5>
     <div class="container text-center mb-5">
       <div class="py-5">

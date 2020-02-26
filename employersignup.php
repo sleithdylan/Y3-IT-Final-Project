@@ -1,7 +1,7 @@
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
-<body class="shards-signup">
+<body class="signup">
   <div class="welcome d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <?php include('includes/nav.php'); ?>
@@ -19,28 +19,29 @@
               <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputName4">Name</label>
-                    <input type="text" class="form-control" id="inputName4" placeholder="Name">
+                    <label for="employer-name">Name</label>
+                    <input type="text" class="form-control" id="employer-name" name="employer-name" placeholder="Name">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <label for="employer-email">Email</label>
+                    <input type="email" class="form-control" id="employer-email" name="employer-email"
+                      placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword4">Password</label>
-                  <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  <label for="employer-password">Password</label>
+                  <input type="password" class="form-control" id="employer-password" name="employer-password"
+                    placeholder="Password">
                 </div>
                 <div class="d-flex">
-                  <button type="submit" class="btn btn-primary flex-grow-1"><a href="./employerlogin.php"
-                      class="text-white">Sign Up</a></button>
+                  <button type="submit" name="register" class="btn btn-primary flex-grow-1">
+                    <a href="./employerlogin.php" class="text-white">Sign Up</a>
+                  </button>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
                   <h6>
                     Already have an account?
-                    <a href="./employerlogin.php" class="text-primary">
-                      Log in
-                    </a>
+                    <a href="./employerlogin.php" class="text-primary">Log in</a>
                   </h6>
                 </div>
               </form>

@@ -1,16 +1,12 @@
-// $(document).ready(function() {
-//   $('button').click(function() {
-//     $('p').removeClass('collapse');
-//   });
-// });
-
 $(function() {
-  $('button').click(function() {
+  $('.read-more').click(function() {
     $(this)
       .parent()
       .parent()
       .toggleClass('collapsed');
-    // $('.btn').html('Read Less');
+    $(this).text(function(i, text) {
+      return text == 'Read Less' ? 'Read More' : 'Read Less';
+    });
     $(this)
       .parent()
       .parent()
@@ -18,15 +14,3 @@ $(function() {
       .slideToggle();
   });
 });
-
-// $('button').click(function() {
-//   if ($(this).hasClass('collapse')) {
-//     $(this)
-//       .removeClass('collapsed')
-//       // .addClass('circle_minus')
-//       .find('button')
-//       .text('Read Less');
-//   } else {
-//     // vice versa
-//   }
-// });
