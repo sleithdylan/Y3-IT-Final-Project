@@ -31,7 +31,7 @@
               <a class="nav-link" href="./internships.php">Internships</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./internships.php">Sitemap</a>
+              <a class="nav-link" href="../sitemap.xml">Sitemap</a>
             </li>
           </ul>
         </div>
