@@ -30,6 +30,9 @@
             <li class="nav-item">
               <a class="nav-link" href="./internships.php">Internships</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./internships.php">Sitemap</a>
+            </li>
           </ul>
         </div>
         <div class="col-md">

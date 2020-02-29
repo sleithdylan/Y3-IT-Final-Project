@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://studenthired.co/</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/index.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/internships.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/studentlogin.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/studentsignup.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/employerlogin.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/employersignup.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/terms.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/privacy.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/disclaimer.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/studentdashboard.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/employerdashboard.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://studenthired.co/addjob.php</loc>
+  <lastmod>2020-02-29T19:43:32+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
