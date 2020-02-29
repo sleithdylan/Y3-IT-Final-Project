@@ -18,6 +18,9 @@
   background: #007bff;
 }
 @media (max-width: 767.98px) {
+  .landing .welcome .welcome-heading {
+    font-size: 3.5rem;
+  }
   .landing .welcome .inner-wrapper {
     text-align: center;
   }
@@ -73,7 +76,6 @@ a:focus,
 a:hover {
   text-decoration: none;
   -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 a:focus {
@@ -97,7 +99,6 @@ img {
   font-size: 15px;
   line-height: 32px;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .footer-menu ul li a:hover {
@@ -320,19 +321,14 @@ img {
   overflow: hidden;
 }
 
-/* .card-body p.collapse:not(.show) {
-  display: flex;
-  height: 3rem;
-  overflow: hidden;
-} */
-
 .brand-logo {
   border-radius: 50%;
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 .brand-logo:hover {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/*# sourceMappingURL=shards-extras.min.css.map */
