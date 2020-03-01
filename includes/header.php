@@ -20,4 +20,7 @@
 
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/1d6b99454b.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <?php include('includes/gtag.php'); ?>
 </head>
