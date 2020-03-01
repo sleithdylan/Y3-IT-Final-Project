@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <?php include('./gtag.php'); ?>
+
   <!-- Basic Page Needs -->
   <title>StudentHired - Search for internships online to find the next step in your career.</title>
   <meta charset="utf-8">
@@ -20,7 +23,4 @@
 
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/1d6b99454b.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <?php include('./gtag.php'); ?>
 </head>
