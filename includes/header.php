@@ -3,7 +3,17 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <?php include('./gtag.php'); ?>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159342175-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159342175-1');
+  </script>
 
   <!-- Basic Page Needs -->
   <title>StudentHired - Search for internships online to find the next step in your career.</title>
