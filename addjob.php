@@ -37,9 +37,7 @@
                   </div>
                 </div>
                 <div class="d-flex">
-                  <button type="submit" name="addjob" class="btn btn-primary flex-grow-1">
-                    <a href="./employerdashboard.php" class="text-white">Add Job</a>
-                  </button>
+                  <button type="submit" name="addjob" class="btn btn-primary flex-grow-1">Add Job</button>
                 </div>
               </form>
             </div>

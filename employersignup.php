@@ -35,9 +35,7 @@
                     placeholder="Password">
                 </div>
                 <div class="d-flex">
-                  <button type="submit" name="register" class="btn btn-primary flex-grow-1">
-                    <a href="./employerlogin.php" class="text-white">Sign Up</a>
-                  </button>
+                  <button type="submit" name="register" class="btn btn-primary flex-grow-1">Sign Up</button>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
                   <h6>

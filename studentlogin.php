@@ -30,9 +30,7 @@
                   </div>
                 </div>
                 <div class="d-flex">
-                  <button type="submit" name="login" class="btn btn-primary flex-grow-1">
-                    <a href="./studentdashboard.php" class="text-white">Log in</a>
-                  </button>
+                  <button type="submit" name="login" class="btn btn-primary flex-grow-1">Log in</button>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
                   <h6>
