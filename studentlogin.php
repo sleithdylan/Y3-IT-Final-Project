@@ -11,32 +11,32 @@ $msgClass = '';
 // Checks for posted data
 if (isset($_POST['login'])) {
   // Starts session
-  // session_start();
+  session_start();
 
   // Gets form data
   $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
   $studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
 
   // Puts variable into session variable
-  // $_SESSION['username'] = $memberUsername;
+  $_SESSION['email'] = $studentEmail;
   
   // SELECT Query
   $query = "SELECT * FROM students WHERE student_email = '$studentEmail' && BINARY student_password = '$studentPassword'";
-  // $hash = "SELECT student_password FROM users WHERE student_email = '$studentEmail'";
+  $hash = "SELECT student_password FROM students WHERE student_email = '$studentEmail'";
   
   // Gets Result
   $result = mysqli_query($conn, $query);
-  // $passwordHashed = mysqli_query($conn, $hash);
+  $passwordHashed = mysqli_query($conn, $hash);
 
   // Returns all hashed passwords in an array
-  // $lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
+  $lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
   
   // Gets number of rows
   $numOfRows = mysqli_num_rows($result);
   
-  if (mysqli_query($conn, $query) && isset($studentEmail) && isset($studentPassword) && $numOfRows == 1) {
+  if (mysqli_query($conn, $query) && isset($studentEmail) && isset($studentPassword) && $numOfRows == 1 || password_verify($studentPassword, $lists[0])) {
     // Sets Cookie for 30 Days and then it will expire
-    setcookie('member-username', $studentEmail, time() + 2592000);
+    setcookie('student_email', $studentEmail, time() + 2592000);
     // Passed
     $msg = '<strong>Success!</strong> You have logged in';
     $msgClass = 'alert-success alert-dismissible fade show';

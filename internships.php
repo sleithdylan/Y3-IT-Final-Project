@@ -12,7 +12,6 @@ $result = mysqli_query($conn, $query);
 
 // Fetch Data
 $lists = mysqli_fetch_all($result, MYSQLI_ASSOC);
-// var_dump($lists);
 
 // Free's result from memory
 mysqli_free_result($result);

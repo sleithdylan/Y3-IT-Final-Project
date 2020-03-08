@@ -11,7 +11,7 @@ $msgClass = '';
 // Checks for posted data
 if (isset($_POST['register'])) {
   // Starts session
-  // session_start();
+  session_start();
 
   // Gets form data
   $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
@@ -19,7 +19,7 @@ if (isset($_POST['register'])) {
   $studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
 
   // Hashed password
-  // $passwordHashed = password_hash($studentPassword, PASSWORD_DEFAULT);
+  $passwordHashed = password_hash($studentPassword, PASSWORD_DEFAULT);
   
   // SELECT Query
   $query = "SELECT * FROM students WHERE student_email = '$studentEmail'";
@@ -34,7 +34,7 @@ if (isset($_POST['register'])) {
     // Passed
     // INSERT Query
     $regQuery = "INSERT INTO students(student_fullname, student_email, student_password) 
-                  VALUES('$studentFullName', '$studentEmail', '$studentPassword')";
+                  VALUES('$studentFullName', '$studentEmail', '$passwordHashed')";
     // Gets Result
     $result = mysqli_query($conn, $regQuery);
     $msg = '<strong>Success!</strong> You are now registered';
