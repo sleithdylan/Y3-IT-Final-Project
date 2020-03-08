@@ -15,24 +15,39 @@ $msgClass = '';
 $email = $_SESSION['email'];
 
 // Checks for posted data
-if (isset($_POST['addjob'])) {
+if (isset($_POST['updatejob'])) {
 		// Gets form data
 		$jobRole = mysqli_real_escape_string($conn, $_POST['job-title']);
 		$jobCompany = mysqli_real_escape_string($conn, $_POST['job-company']);
 		$jobLocation = mysqli_real_escape_string($conn, $_POST['job-location']);
 		$jobOtherDetails = mysqli_real_escape_string($conn, $_POST['job-other-details']);
 
-    // INSERT Query
-		$query = "INSERT INTO jobs(job_title, job_company, job_location, job_other_details) 
-                VALUES('$jobRole', '$jobCompany', '$jobLocation', '$jobOtherDetails')";
+		// Gets ID
+		$id = mysqli_real_escape_string($conn, $_GET['id']);
 
-		// Checks Required Fields
+		// SELECT Query
+    $query = "SELECT * FROM jobs ORDER BY job_id WHERE job_id = {$id}";
+
+		// Gets Result
+		$result = mysqli_query($conn, $query);
+
+    // Fetch Data
+		$lists = mysqli_fetch_assoc($result);
+
+		// UPDATE Query
+		$query = "UPDATE jobs SET 
+                job_title = '$jobRole',
+                job_company = '$jobCompany', 
+                job_location = '$jobLocation', 
+                job_other_details = '$jobOtherDetails'
+              WHERE job_id = {$id}";
+
 		if (mysqli_query($conn, $query) && isset($jobRole) && isset($jobCompany) && isset($jobLocation) && isset($jobOtherDetails)) {
-				// Passed
-				$msg = '<strong>Success!</strong> Job has been added';
+        // Passed
+        $msg = '<strong>Success!</strong> Member has been added';
 				$msgClass = 'alert-success alert-dismissible fade show';
-				// Redirects to employerdashboard.php after 1 second
-				header('refresh:1; url=employerdashboard.php');
+        // Redirects to employerdashboard.php
+				header('Location: employerdashboard.php');
 		}
 		else {
         // Failed
@@ -42,6 +57,24 @@ if (isset($_POST['addjob'])) {
 		}
 
 }
+
+// Gets ID
+$id = mysqli_real_escape_string($conn, $_GET['id']);
+
+// SELECT Query
+$query = "SELECT * FROM jobs WHERE job_id = {$id}";
+
+// Gets Result
+$result = mysqli_query($conn, $query);
+
+// Fetch Data
+$lists = mysqli_fetch_assoc($result);
+
+// Free's result from memory
+mysqli_free_result($result);
+
+// Closes Connection
+mysqli_close($conn);
 
 ?>
 
@@ -56,7 +89,7 @@ if (isset($_POST['addjob'])) {
       <div class="row">
         <div class="col-md-8 mb-3">
           <div class="about-title d-flex justify-content-between align-items-end">
-            <h5>Add a Job</h5>
+            <h5>Edit Job</h5>
           </div>
         </div>
       </div>
@@ -75,24 +108,27 @@ if (isset($_POST['addjob'])) {
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="job-title">Role</label>
-                    <input type="text" class="form-control" id="job-title" name="job-title" placeholder="Role">
+                    <input type="text" class="form-control" id="job-title" name="job-title" placeholder="Role"
+                      value="<?php echo $lists['job_title']; ?>">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="job-company">Company</label>
-                    <input type="text" class="form-control" id="job-company" name="job-company" placeholder="Company">
+                    <input type="text" class="form-control" id="job-company" name="job-company" placeholder="Company"
+                      value="<?php echo $lists['job_company']; ?>">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="job-location">Location</label>
-                    <input type="text" class="form-control" id="job-location" name="job-location"
-                      placeholder="Location">
+                    <input type="text" class="form-control" id="job-location" name="job-location" placeholder="Location"
+                      value="<?php echo $lists['job_location']; ?>">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="job-other-details">Other</label>
-                    <textarea class="form-control" id="job-other-details" name="job-other-details" rows="6"></textarea>
+                    <textarea class="form-control" id="job-other-details" name="job-other-details"
+                      rows="6"><?php echo $lists['job_other_details']; ?></textarea>
                   </div>
                 </div>
                 <div class="d-flex">
-                  <button type="submit" name="addjob" class="btn btn-primary flex-grow-1">Add Job</button>
+                  <button type="submit" name="updatejob" class="btn btn-primary flex-grow-1">Edit Job</button>
                 </div>
               </form>
             </div>

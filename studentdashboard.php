@@ -1,27 +1,3 @@
-<?php
-// // Requires Config
-// require('config/config.php');
-// // Creates and Checks Connection
-// require('config/db.php');
-
-// // SELECT Query
-// $query = "SELECT * FROM students";
-
-// // Gets Result
-// $result = mysqli_query($conn, $query);
-
-// // Fetch Data
-// $lists = mysqli_fetch_all($result, MYSQLI_ASSOC);
-// var_dump($lists);
-
-// // Free's result from memory
-// mysqli_free_result($result);
-
-// // Closes Connection
-// mysqli_close($conn);
-
-?>
-
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 

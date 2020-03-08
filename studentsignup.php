@@ -39,7 +39,7 @@ if (isset($_POST['register'])) {
     $result = mysqli_query($conn, $regQuery);
     $msg = '<strong>Success!</strong> You are now registered';
     $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to index.php after 1 second
+    // Redirects to studentlogin.php after 1 second
     header('refresh:1; url=studentlogin.php');
   } else {
     // Failed

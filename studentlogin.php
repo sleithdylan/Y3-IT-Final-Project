@@ -40,7 +40,7 @@ if (isset($_POST['login'])) {
     // Passed
     $msg = '<strong>Success!</strong> You have logged in';
     $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to index.php after 1 second
+    // Redirects to studentdashboard.php after 1 second
     header('refresh:1;url=studentdashboard.php');
   } else {
     // Failed
