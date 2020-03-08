@@ -1,3 +1,63 @@
+<?php
+// Starts session
+session_start();
+
+// Requires Config
+require('config/config.php');
+// Creates and Checks Connection
+require('config/db.php');
+
+// Alert/Message Variables
+$msg = '';
+$msgClass = '';
+
+// Puts session variable into $username
+$email = $_SESSION['email'];
+
+// Checks for posted data
+if (isset($_POST['delete'])) {
+		// Gets form data
+		$delete_id = mysqli_real_escape_string($conn, $_POST['delete-id']);
+
+		// DELETE Query
+		$query = "DELETE FROM jobs WHERE job_id = {$delete_id}";
+
+		if (mysqli_query($conn, $query)) {
+        // Passed
+				$msg = '<strong>Success!</strong> Member has been deleted';
+				$msgClass = 'alert-success alert-dismissible fade show mt-4';
+        // Redirects to employerdashboard.php
+				header('refresh:1; url=employerdashboard.php');
+		}
+		else {
+        // Failed
+        // Returns error
+        $msg = '<strong>Error!</strong> Something went wrong.. (' . mysqli_error($conn) . ')';
+				$msgClass = 'alert-danger alert-dismissible fade show my-4';
+		}
+
+}
+
+// SELECT Query
+$query = "SELECT * FROM jobs NATURAL JOIN (employers) WHERE employer_email = '$email' ORDER BY job_id ASC";
+
+// Gets Result
+$result = mysqli_query($conn, $query);
+
+// Fetch Data
+$lists = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// Checks number of rows
+$numRows = mysqli_num_rows($result);
+
+// Free's result from memory
+mysqli_free_result($result);
+
+// Closes Connection
+mysqli_close($conn);
+
+?>
+
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
@@ -15,64 +75,30 @@
               Job</a>
           </button>
         </div>
+        <?php foreach($lists as $list) : ?>
         <div id="cardDiv" class="card my-4">
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
-              <h4 class="mr-3">Role</h4>
-              <div>
+              <h4 class="mr-3"><?php echo $list['job_title'] ?></h4>
+              <!-- <div>
                 <a href="#"><i class="fas fa-pen mr-3"></i></a>
                 <a href="#"><i class="fas fa-trash text-danger"></i></a>
-              </div>
+              </div> -->
+              <form method="POST" action="employerdashboard.php">
+                <input type="hidden" name="delete-id" value="<?php echo $list['job_id']; ?>">
+                <a href="#"><i class="fas fa-pen mr-3"></i></a>
+                <button type="submit" name="delete"><i class="fas fa-trash text-danger"></i></button>
+              </form>
             </div>
-            <h5>Company</h5>
-            <h6>Location</h6>
-            <p class="collapse">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Culpa
-              cumque amet iste quisquam deleniti molestiae harum animi, dolore impedit sequi illum aliquid consectetur
-              porro possimus dolorum. Dignissimos iste dolores ratione laboriosam quibusdam accusamus nisi eius esse
-              accusantium repellendus cumque, aut corrupti, distinctio repudiandae placeat? Similique cum, eos
-              tenetur, blanditiis quaerat, cupiditate natus obcaecati ipsa harum nihil cumque voluptatum? Porro
-              quaerat inventore mollitia eligendi perspiciatis dolores voluptas adipisci, ipsum officia minima. Sunt
-              id dolor assumenda blanditiis sequi minus illo impedit, molestiae dolorum, ea eius provident quis
-              voluptatibus iste libero eum nesciunt in eos? Et aspernatur minus delectus, voluptatem quasi dicta,
-              iusto consequatur voluptas ipsum velit modi tempora nobis est quidem dolore vitae tenetur accusamus nam.
-              Quaerat obcaecati magnam sunt in neque, temporibus consequuntur quae. Dignissimos est minima facere
-              omnis vero perspiciatis, corrupti pariatur numquam et magni ducimus? Doloremque eveniet similique ut
-              velit molestias pariatur voluptates illo nulla. Culpa deserunt exercitationem expedita!</p>
+            <h5><?php echo $list['job_company'] ?></h5>
+            <h6><?php echo $list['job_location'] ?></h6>
+            <p class="collapse"><?php echo $list['job_other_details'] ?></p>
             <a href="#">
               <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
             </a>
           </div>
         </div>
-        <div id="cardDiv" class="card my-4">
-          <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <h4 class="mr-3">Role</h4>
-              <div>
-                <a href="#"><i class="fas fa-pen mr-3"></i></a>
-                <a href="#"><i class="fas fa-trash text-danger"></i></a>
-              </div>
-            </div>
-            <h5>Company</h5>
-            <h6>Location</h6>
-            <p class="collapse">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Culpa
-              cumque amet iste quisquam deleniti molestiae harum animi, dolore impedit sequi illum aliquid consectetur
-              porro possimus dolorum. Dignissimos iste dolores ratione laboriosam quibusdam accusamus nisi eius esse
-              accusantium repellendus cumque, aut corrupti, distinctio repudiandae placeat? Similique cum, eos
-              tenetur, blanditiis quaerat, cupiditate natus obcaecati ipsa harum nihil cumque voluptatum? Porro
-              quaerat inventore mollitia eligendi perspiciatis dolores voluptas adipisci, ipsum officia minima. Sunt
-              id dolor assumenda blanditiis sequi minus illo impedit, molestiae dolorum, ea eius provident quis
-              voluptatibus iste libero eum nesciunt in eos? Et aspernatur minus delectus, voluptatem quasi dicta,
-              iusto consequatur voluptas ipsum velit modi tempora nobis est quidem dolore vitae tenetur accusamus nam.
-              Quaerat obcaecati magnam sunt in neque, temporibus consequuntur quae. Dignissimos est minima facere
-              omnis vero perspiciatis, corrupti pariatur numquam et magni ducimus? Doloremque eveniet similique ut
-              velit molestias pariatur voluptates illo nulla. Culpa deserunt exercitationem expedita!</p>
-            <a href="#">
-              <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
-            </a>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
