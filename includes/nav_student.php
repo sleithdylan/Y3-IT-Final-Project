@@ -29,7 +29,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Profile</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-danger" href="./studentlogin.php">Logout</a>
+            <a class="dropdown-item text-danger" href="./studentlogout.php">Logout</a>
           </div>
         </li>
       </ul>
