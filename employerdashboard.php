@@ -87,15 +87,14 @@ mysqli_close($conn);
               <form method="POST" action="employerdashboard.php">
                 <input type="hidden" name="delete-id" value="<?php echo $list['job_id']; ?>">
                 <a href="#"><i class="fas fa-pen mr-3"></i></a>
-                <button type="submit" name="delete"><i class="fas fa-trash text-danger"></i></button>
+                <button type="submit" name="delete" class="border-0 bg-white"><i
+                    class="fas fa-trash text-danger"></i></button>
               </form>
             </div>
             <h5><?php echo $list['job_company'] ?></h5>
             <h6><?php echo $list['job_location'] ?></h6>
             <p class="collapse"><?php echo $list['job_other_details'] ?></p>
-            <a href="#">
-              <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
-            </a>
+            <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
           </div>
         </div>
         <?php endforeach; ?>
