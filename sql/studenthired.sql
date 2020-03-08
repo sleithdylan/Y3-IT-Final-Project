@@ -5,11 +5,11 @@ CREATE TABLE IF NOT EXISTS students (
   student_fullname VARCHAR(255) NOT NULL,
   student_email VARCHAR(255) NOT NULL,
   student_password VARCHAR(255) NOT NULL,
-  student_phone INT(10) NOT NULL,
-  student_location VARCHAR(255) NOT NULL,
-  student_bio TEXT,
-  student_github VARCHAR(255) NOT NULL,
-  student_linkedin VARCHAR(255) NOT NULL,
+  student_phone INT(10) NULL,
+  student_location VARCHAR(255) NULL,
+  student_bio TEXT NULL,
+  student_github VARCHAR(255) NULL,
+  student_linkedin VARCHAR(255) NULL,
 PRIMARY KEY (student_id));
 
 -- Data for students

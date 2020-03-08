@@ -1,3 +1,58 @@
+<?php
+// Requires Config
+require('config/config.php');
+// Creates and Checks Connection
+require('config/db.php');
+
+// Alert/Message Variables
+$msg = '';
+$msgClass = '';
+
+// Checks for posted data
+if (isset($_POST['login'])) {
+  // Starts session
+  // session_start();
+
+  // Gets form data
+  $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
+  $studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
+
+  // Puts variable into session variable
+  // $_SESSION['username'] = $memberUsername;
+  
+  // SELECT Query
+  $query = "SELECT * FROM students WHERE student_email = '$studentEmail' && BINARY student_password = '$studentPassword'";
+  // $hash = "SELECT student_password FROM users WHERE student_email = '$studentEmail'";
+  
+  // Gets Result
+  $result = mysqli_query($conn, $query);
+  // $passwordHashed = mysqli_query($conn, $hash);
+
+  // Returns all hashed passwords in an array
+  // $lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
+  
+  // Gets number of rows
+  $numOfRows = mysqli_num_rows($result);
+  
+  if (mysqli_query($conn, $query) && isset($studentEmail) && isset($studentPassword) && $numOfRows == 1) {
+    // Sets Cookie for 30 Days and then it will expire
+    setcookie('member-username', $studentEmail, time() + 2592000);
+    // Passed
+    $msg = '<strong>Success!</strong> You have logged in';
+    $msgClass = 'alert-success alert-dismissible fade show';
+    // Redirects to index.php after 1 second
+    header('refresh:1;url=studentdashboard.php');
+  } else {
+    // Failed
+    // Returns error
+    $msg = '<strong>Error!</strong> Something went wrong..';
+    $msgClass = 'alert-danger alert-dismissible fade show my-4';
+  }
+  
+}
+
+?>
+
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
@@ -14,9 +69,16 @@
       </div>
       <div class="row">
         <div class="col-md-8 col-lg-6 mx-auto">
+          <?php if($msg != ""): ?>
+          <div class="alert <?php echo $msgClass; ?> alert-dismissible fade show" role="alert"><?php echo $msg; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <?php endif; ?>
           <div class="card">
             <div class="card-body">
-              <form>
+              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="student-email">Email</label>
