@@ -1,7 +1,7 @@
 DATABASE TABLES
 ---------------
 students
--student_id // int(11) PK AUTO_INCREMENT
+-student_id int(11) PK AUTO_INCREMENT
 -student_fullname varchar(255)
 -student_email varchar(255)
 -student_password varchar(255)
@@ -13,13 +13,13 @@ students
 -student_linkedin varchar(255)
 
 employers
--employer_id // int(11) PK AUTO_INCREMENT
+-employer_id int(11) PK AUTO_INCREMENT
 -employer_fullname varchar(255)
 -employer_email varchar(255)
 -employer_password varchar(255)
 
 jobs
--job_id // int(11) PK AUTO_INCREMENT
+-job_id int(11) PK AUTO_INCREMENT
 -created_at datetime
 -job_title varchar(255) FK
 -job_company varchar(255)
@@ -27,13 +27,13 @@ jobs
 -job_other_details TEXT
 
 experience
--experience_id // int(11) AUTO_INCREMENT
+-experience_id int(11) AUTO_INCREMENT
 -job_title varchar(255) FK
 -job_time varchar(255)
 -job_bio TEXT
 
 education
--education_id // int(11) AUTO_INCREMENT
+-education_id int(11) AUTO_INCREMENT
 -college varchar(255) FK
 -education_time varchar(255)
 -education_bio TEXT

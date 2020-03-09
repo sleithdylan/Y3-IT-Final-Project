@@ -71,9 +71,9 @@ mysqli_close($conn);
       <div class="col-md-12">
         <div class="about-title d-flex justify-content-between align-items-end">
           <h5>Manage Your Jobs</h5>
-          <button type="submit" class="btn btn-primary"><a href="./addjob.php" class="text-white">Add a
-              Job</a>
-          </button>
+          <a href="./addjob.php" class="text-white">
+            <button class="btn btn-primary">Add a job</button>
+          </a>
         </div>
         <?php foreach($lists as $list) : ?>
         <div id="cardDiv" class="card my-4">
