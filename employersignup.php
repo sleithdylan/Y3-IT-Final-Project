@@ -20,16 +20,16 @@ if (isset($_POST['register'])) {
 
   // Hashed password
   $passwordHashed = password_hash($employerPassword, PASSWORD_DEFAULT);
-  
+
   // SELECT Query
   $query = "SELECT * FROM employers WHERE employer_email = '$employerEmail'";
-  
+
   // Gets Result
   $result = mysqli_query($conn, $query);
-  
+
   // Gets number of rows
   $numOfRows = mysqli_num_rows($result);
-  
+
   if (mysqli_query($conn, $query) && isset($employerFullName) && isset($employerEmail) && isset($employerPassword) && $numOfRows != 1) {
     // Passed
     // INSERT Query
@@ -47,7 +47,7 @@ if (isset($_POST['register'])) {
     $msg = '<strong>Error!</strong> Email taken...';
     $msgClass = 'alert-danger alert-dismissible fade show my-4';
   }
-  
+
 }
 
 ?>

@@ -18,22 +18,22 @@ if (isset($_POST['login'])) {
   $studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
 
   // Puts variable into session variable
-  $_SESSION['email'] = $studentEmail;
-  
+  $_SESSION['student_email'] = $studentEmail;
+
   // SELECT Query
   $query = "SELECT * FROM students WHERE student_email = '$studentEmail' && BINARY student_password = '$studentPassword'";
   $hash = "SELECT student_password FROM students WHERE student_email = '$studentEmail'";
-  
+
   // Gets Result
   $result = mysqli_query($conn, $query);
   $passwordHashed = mysqli_query($conn, $hash);
 
   // Returns all hashed passwords in an array
   $lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
-  
+
   // Gets number of rows
   $numOfRows = mysqli_num_rows($result);
-  
+
   if (mysqli_query($conn, $query) && isset($studentEmail) && isset($studentPassword) && $numOfRows == 1 || password_verify($studentPassword, $lists[0])) {
     // Sets Cookie for 30 Days and then it will expire
     setcookie('student_email', $studentEmail, time() + 2592000);
@@ -48,10 +48,11 @@ if (isset($_POST['login'])) {
     $msg = '<strong>Error!</strong> Something went wrong..';
     $msgClass = 'alert-danger alert-dismissible fade show my-4';
   }
-  
+
 }
 
 ?>
+
 
 <!-- Header -->
 <?php include('includes/header.php'); ?>

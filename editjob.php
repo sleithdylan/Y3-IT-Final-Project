@@ -16,45 +16,44 @@ $email = $_SESSION['email'];
 
 // Checks for posted data
 if (isset($_POST['updatejob'])) {
-		// Gets form data
-		$jobRole = mysqli_real_escape_string($conn, $_POST['job-title']);
-		$jobCompany = mysqli_real_escape_string($conn, $_POST['job-company']);
-		$jobLocation = mysqli_real_escape_string($conn, $_POST['job-location']);
-		$jobOtherDetails = mysqli_real_escape_string($conn, $_POST['job-other-details']);
+  // Gets form data
+  $jobRole = mysqli_real_escape_string($conn, $_POST['job-title']);
+  $jobCompany = mysqli_real_escape_string($conn, $_POST['job-company']);
+  $jobLocation = mysqli_real_escape_string($conn, $_POST['job-location']);
+  $jobOtherDetails = mysqli_real_escape_string($conn, $_POST['job-other-details']);
 
-		// Gets ID
-		$id = mysqli_real_escape_string($conn, $_GET['id']);
+  // Gets ID
+  $id = mysqli_real_escape_string($conn, $_GET['id']);
 
-		// SELECT Query
-    $query = "SELECT * FROM jobs ORDER BY job_id WHERE job_id = {$id}";
+  // SELECT Query
+  $query = "SELECT * FROM jobs ORDER BY job_id WHERE job_id = {$id}";
 
-		// Gets Result
-		$result = mysqli_query($conn, $query);
+  // Gets Result
+  $result = mysqli_query($conn, $query);
 
-    // Fetch Data
-		$lists = mysqli_fetch_assoc($result);
+  // Fetch Data
+  $lists = mysqli_fetch_assoc($result);
 
-		// UPDATE Query
-		$query = "UPDATE jobs SET 
+  // UPDATE Query
+  $query = "UPDATE jobs SET 
                 job_title = '$jobRole',
                 job_company = '$jobCompany', 
                 job_location = '$jobLocation', 
                 job_other_details = '$jobOtherDetails'
               WHERE job_id = {$id}";
 
-		if (mysqli_query($conn, $query) && isset($jobRole) && isset($jobCompany) && isset($jobLocation) && isset($jobOtherDetails)) {
-        // Passed
-        $msg = '<strong>Success!</strong> Member has been added';
-				$msgClass = 'alert-success alert-dismissible fade show';
-        // Redirects to employerdashboard.php
-				header('Location: employerdashboard.php');
-		}
-		else {
-        // Failed
-        // Returns error
-				$msg = '<strong>Error!</strong> Please fill in all fields correctly';
-				$msgClass = 'alert-danger alert-dismissible fade show';
-		}
+  if (mysqli_query($conn, $query) && isset($jobRole) && isset($jobCompany) && isset($jobLocation) && isset($jobOtherDetails)) {
+    // Passed
+    $msg = '<strong>Success!</strong> Member has been added';
+    $msgClass = 'alert-success alert-dismissible fade show';
+    // Redirects to employerdashboard.php
+    header('Location: employerdashboard.php');
+  } else {
+    // Failed
+    // Returns error
+    $msg = '<strong>Error!</strong> Please fill in all fields correctly';
+    $msgClass = 'alert-danger alert-dismissible fade show';
+  }
 
 }
 

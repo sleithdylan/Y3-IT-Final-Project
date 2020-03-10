@@ -1,6 +1,7 @@
 <?php
 // Creates Connection
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+// $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 
 // Checks Connection
 if (mysqli_connect_errno()) {
