@@ -22,14 +22,16 @@ if (isset($_POST['profile'])) {
   // echo "<pre>", print_r($_FILES['student-picture']['name']),"</pre>";
   
   // Gets form data
-  $studentPicture = time() . '_' . $_FILES['student-picture']['name'];
+  // $studentPicture = time() . '_' . $_FILES['student-picture']['name'];
   $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
   $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
-  $studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
   $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
   $studentPhone = mysqli_real_escape_string($conn, $_POST['student-phone']);
+  $studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
+  $studentGithub = mysqli_real_escape_string($conn, $_POST['student-github']);
+  $studentLinkedin = mysqli_real_escape_string($conn, $_POST['student-linkedin']);
 
-  $target = 'assets/images/profile-pictures/' . $studentPicture;
+  // $target = 'assets/images/profile-pictures/' . $studentPicture;
 
   // if(move_uploaded_file($_FILES['student-picture']['tmp_name'], $target)){
   //     $query = "INSERT INTO students(student_picture, student_fullname, student_email, student_phone, student_location, student_bio)
@@ -41,9 +43,27 @@ if (isset($_POST['profile'])) {
   // 		$msgClass = 'alert-danger alert-dismissible fade show';
   // }
 
-  // // INSERT Query
-  $query = "INSERT INTO students(student_fullname, student_email, student_phone, student_location, student_bio) 
-                VALUES('$studentFullName', '$studentEmail', '$studentPhone', '$studentLocation', '$studentBio')";
+  // Gets ID
+  $id = mysqli_real_escape_string($conn, $_GET['id']);
+
+  // SELECT Query
+  $query = "SELECT * FROM students ORDER BY student_id WHERE student_id = {$id}";
+
+  // Gets Result
+  $result = mysqli_query($conn, $query);
+
+  // Fetch Data
+  $lists = mysqli_fetch_assoc($result);
+
+  $query = "UPDATE students SET 
+      student_fullname = '$studentFullName',
+      student_email = '$studentEmail', 
+      student_phone = '$studentPhone', 
+      student_location = '$studentLocation', 
+      student_bio = '$studentBio',
+      student_github = '$studentGithub',
+      student_linkedin = '$studentLinkedin'
+  WHERE student_id = {$id}";
 
   // Checks Required Fields
   if (mysqli_query($conn, $query)) {
@@ -61,6 +81,25 @@ if (isset($_POST['profile'])) {
   }
 
 }
+
+  // Gets ID
+  $id = mysqli_real_escape_string($conn, $_GET['id']);
+
+  // SELECT Query
+  $query = "SELECT * FROM students ORDER BY student_id WHERE student_id = {$id}";
+
+// Gets Result
+$result = mysqli_query($conn, $query);
+
+// Fetch Data
+$lists = mysqli_fetch_assoc($result);
+var_dump($lists);
+
+// Free's result from memory
+mysqli_free_result($result);
+
+// Closes Connection
+mysqli_close($conn);
 
 ?>
 
@@ -100,24 +139,37 @@ if (isset($_POST['profile'])) {
                   <div class="form-group col-md-12">
                     <label for="student-fullname">Full Name</label>
                     <input type="text" class="form-control" id="student-fullname" name="student-fullname"
-                      placeholder="Full Name">
+                      value="<?php echo $lists['student_fullname']; ?>" placeholder="Full Name">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-email">Email</label>
-                    <input type="text" class="form-control" id="student-email" name="student-email" placeholder="Email">
+                    <input type="email" class="form-control" id="student-email" name="student-email"
+                      value="<?php echo $lists['student_email']; ?>" placeholder="Email">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-phone">Phone</label>
-                    <input type="text" class="form-control" id="student-phone" name="student-phone" placeholder="Phone">
+                    <input type="text" class="form-control" id="student-phone" name="student-phone"
+                      value="<?php echo $lists['student_phone']; ?>" placeholder="Phone">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-location">Location</label>
-                    <input type="email" class="form-control" id="student-location" name="student-location"
-                      placeholder="Location">
+                    <input type="text" class="form-control" id="student-location" name="student-location"
+                      value="<?php echo $lists['student_location']; ?>" placeholder="Location">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="student-github">GitHub</label>
+                    <input type="text" class="form-control" id="student-github" name="student-github"
+                      value="<?php echo $lists['student_github']; ?>" placeholder="GitHub">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="student-linkedin">LinkedIn</label>
+                    <input type="text" class="form-control" id="student-linkedin" name="student-linkedin"
+                      value="<?php echo $lists['student_linkedin']; ?>" placeholder="LinkedIn">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-about">About Me</label>
-                    <textarea class="form-control" id="student-about" name="student-about" rows="6"></textarea>
+                    <textarea class="form-control" id="student-about" name="student-about"
+                      value="<?php echo $lists['student_bio']; ?>" rows="6"></textarea>
                   </div>
                 </div>
                 <div class="d-flex">

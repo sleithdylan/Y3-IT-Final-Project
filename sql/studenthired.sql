@@ -15,9 +15,9 @@ USE studenthired;
 DROP TABLE IF EXISTS Students;
 CREATE TABLE IF NOT EXISTS Students (
   student_id SMALLINT(3) NOT NULL AUTO_INCREMENT,
-  student_fullname VARCHAR(255) NOT NULL,
-  student_email VARCHAR(255) NOT NULL,
-  student_password VARCHAR(255) NOT NULL,
+  student_fullname VARCHAR(255) NULL DEFAULT NULL,
+  student_email VARCHAR(255) NULL DEFAULT NULL,
+  student_password VARCHAR(255) NULL DEFAULT NULL,
   student_phone INT(10) ZEROFILL NULL,
   student_location VARCHAR(255) NULL,
   student_bio TEXT NULL,
