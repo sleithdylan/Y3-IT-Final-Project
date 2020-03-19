@@ -24,9 +24,9 @@ if (isset($_POST['profile'])) {
   // Gets form data
   $studentPicture = time() . '_' . $_FILES['student-picture']['name'];
   $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
-  $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
-  $studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
   $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
+  $studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
+  $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
   $studentPhone = mysqli_real_escape_string($conn, $_POST['student-phone']);
 
   $target = 'assets/images/profile-pictures/' . $studentPicture;
@@ -103,21 +103,21 @@ if (isset($_POST['profile'])) {
                       placeholder="Full Name">
                   </div>
                   <div class="form-group col-md-12">
-                    <label for="student-location">Location</label>
-                    <input type="text" class="form-control" id="student-location" name="student-location"
-                      placeholder="Location">
-                  </div>
-                  <div class="form-group col-md-12">
-                    <label for="student-about">About Me</label>
-                    <textarea class="form-control" id="student-about" name="student-about" rows="6"></textarea>
-                  </div>
-                  <div class="form-group col-md-12">
                     <label for="student-email">Email</label>
                     <input type="text" class="form-control" id="student-email" name="student-email" placeholder="Email">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-phone">Phone</label>
                     <input type="text" class="form-control" id="student-phone" name="student-phone" placeholder="Phone">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="student-location">Location</label>
+                    <input type="email" class="form-control" id="student-location" name="student-location"
+                      placeholder="Location">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="student-about">About Me</label>
+                    <textarea class="form-control" id="student-about" name="student-about" rows="6"></textarea>
                   </div>
                 </div>
                 <div class="d-flex">
