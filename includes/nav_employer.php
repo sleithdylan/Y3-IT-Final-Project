@@ -27,6 +27,7 @@
             <i class="fas fa-user mr-2"></i><?php echo $email; ?>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="./employerdashboard.php">Dashboard</a>
             <a class="dropdown-item" href="#">Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-danger" href="./employerlogout.php">Logout</a>

@@ -24,9 +24,10 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user mr-2"></i><?php echo $studentEmail; ?>
+            <i class="fas fa-user mr-2"></i><?php echo $email; ?>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="./studentdashboard.php">Dashboard</a>
             <a class="dropdown-item" href="./studentprofile.php?id=2">Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-danger" href="./studentlogout.php">Logout</a>

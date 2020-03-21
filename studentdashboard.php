@@ -2,7 +2,7 @@
 // Starts session
 session_start();
 
-$studentEmail = $_SESSION['student_email'];
+$email = $_SESSION['student_email'];
 
 function getUsersData($studentId) {
   // Requires Config
@@ -26,12 +26,12 @@ function getUsersData($studentId) {
   return $array;
 }
 
-function getId($studentEmail) {
+function getId($email) {
   // Requires Config
   require ('config/config.php');
   // Creates and Checks Connection
   require ('config/db.php');
-  $query = mysqli_query($conn, "SELECT student_id FROM students WHERE student_email='" . $studentEmail . "'");
+  $query = mysqli_query($conn, "SELECT student_id FROM students WHERE student_email='" . $email . "'");
   while ($row = mysqli_fetch_assoc($query)) {
     return $row['student_id'];
   }

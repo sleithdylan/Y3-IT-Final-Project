@@ -109,7 +109,7 @@ mysqli_close($conn);
 <body class="addjob">
   <div class="welcome d-flex justify-content-center flex-column">
     <!-- Navigation -->
-    <?php include('includes/nav_employer.php'); ?>
+    <?php include('includes/nav_student.php'); ?>
     <div class="d-flex flex-column inner-wrapper justify-contents-center mt-auto mb-auto container">
       <div class="row">
         <div class="col-md-8 mb-3">
