@@ -57,7 +57,6 @@ if (isset($_POST['profile'])) {
 
   $query = "UPDATE students SET 
       student_fullname = '$studentFullName',
-      student_email = '$studentEmail', 
       student_phone = '$studentPhone', 
       student_location = '$studentLocation', 
       student_bio = '$studentBio',
@@ -86,7 +85,7 @@ if (isset($_POST['profile'])) {
   $id = mysqli_real_escape_string($conn, $_GET['id']);
 
   // SELECT Query
-  $query = "SELECT * FROM students ORDER BY student_id WHERE student_id = {$id}";
+  $query = "SELECT * FROM students WHERE student_id = {$id}";
 
 // Gets Result
 $result = mysqli_query($conn, $query);
@@ -106,7 +105,7 @@ mysqli_close($conn);
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 
-<body class="addjob">
+<body class="studentprofile">
   <div class="welcome d-flex justify-content-center flex-column">
     <!-- Navigation -->
     <?php include('includes/nav_student.php'); ?>
@@ -129,7 +128,8 @@ mysqli_close($conn);
           <?php endif; ?>
           <div class="card">
             <div class="card-body">
-              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" id="addjob" enctype="multipart/form-data">
+              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" id="studentprofile"
+                enctype="multipart/form-data">
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="student-picture">Profile Picture</label>
@@ -140,11 +140,6 @@ mysqli_close($conn);
                     <label for="student-fullname">Full Name</label>
                     <input type="text" class="form-control" id="student-fullname" name="student-fullname"
                       value="<?php echo $lists['student_fullname']; ?>" placeholder="Full Name">
-                  </div>
-                  <div class="form-group col-md-12">
-                    <label for="student-email">Email</label>
-                    <input type="email" class="form-control" id="student-email" name="student-email"
-                      value="<?php echo $lists['student_email']; ?>" placeholder="Email">
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-phone">Phone</label>
@@ -169,7 +164,7 @@ mysqli_close($conn);
                   <div class="form-group col-md-12">
                     <label for="student-about">About Me</label>
                     <textarea class="form-control" id="student-about" name="student-about"
-                      value="<?php echo $lists['student_bio']; ?>" rows="6"></textarea>
+                      rows="6"><?php echo $lists['student_bio']; ?></textarea>
                   </div>
                 </div>
                 <div class="d-flex">

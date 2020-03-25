@@ -337,3 +337,44 @@ img {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+/* Student Profile */
+.studentprofile .welcome {
+  position: relative;
+  height: 80vh;
+  min-height: 1300px;
+}
+
+@media (max-width: 767.98px) {
+  .studentprofile .welcome .inner-wrapper {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .studentprofile .welcome .welcome-heading {
+    font-size: 2.415rem;
+  }
+}
+.studentprofile .section-title {
+  position: relative;
+}
+
+.studentprofile .feature .icon {
+  border-radius: 50%;
+  min-width: 65px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(33, 37, 41, 0.1), 0 7px 14px rgba(33, 37, 41, 0.1);
+  font-size: 27px;
+}
+.studentprofile .section {
+  border-bottom: 1px solid #eaebed;
+}
+.studentprofile .section-invert {
+  background: #f9fafc;
+}
+.studentprofile .testimonials .avatar {
+  max-width: 80px;
+  overflow: hidden;
+}
