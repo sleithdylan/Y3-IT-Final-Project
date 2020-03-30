@@ -57,6 +57,7 @@ if (isset($_POST['profile'])) {
 
   $query = "UPDATE students SET 
       student_fullname = '$studentFullName',
+      student_email = '$studentEmail',
       student_phone = '$studentPhone', 
       student_location = '$studentLocation', 
       student_bio = '$studentBio',
@@ -92,7 +93,7 @@ $result = mysqli_query($conn, $query);
 
 // Fetch Data
 $lists = mysqli_fetch_assoc($result);
-var_dump($lists);
+// var_dump($lists);
 
 // Free's result from memory
 mysqli_free_result($result);
@@ -142,6 +143,11 @@ mysqli_close($conn);
                       value="<?php echo $lists['student_fullname']; ?>" placeholder="Full Name">
                   </div>
                   <div class="form-group col-md-12">
+                    <label for="student-email">Email</label>
+                    <input type="email" class="form-control" id="student-email" name="student-email"
+                      value="<?php echo $lists['student_email']; ?>" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-12">
                     <label for="student-phone">Phone</label>
                     <input type="text" class="form-control" id="student-phone" name="student-phone"
                       value="<?php echo $lists['student_phone']; ?>" placeholder="Phone">
@@ -151,6 +157,7 @@ mysqli_close($conn);
                     <input type="text" class="form-control" id="student-location" name="student-location"
                       value="<?php echo $lists['student_location']; ?>" placeholder="Location">
                   </div>
+                  <hr>
                   <div class="form-group col-md-12">
                     <label for="student-github">GitHub</label>
                     <input type="text" class="form-control" id="student-github" name="student-github"

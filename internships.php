@@ -47,7 +47,7 @@ mysqli_close($conn);
             <p class="collapse"><?php echo $list['job_other_details'] ?></p>
             <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
             <a href="#">
-              <button type="button" class="btn btn-primary mt-1">Apply Now</button>
+              <button type="button" class="btn btn-primary mt-1" disabled>Apply Now</button>
             </a>
           </div>
         </div>

@@ -378,3 +378,7 @@ img {
   max-width: 80px;
   overflow: hidden;
 }
+
+.studentprofile hr {
+  width: 100%;
+}

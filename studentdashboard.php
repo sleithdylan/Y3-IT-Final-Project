@@ -85,7 +85,6 @@ function getId($email) {
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">About Me</h5>
-              <a href="#"><i class="fas fa-pen"></i></a>
             </div>
             <p><?php echo $usersData['student_bio'] ?></p>
           </div>
@@ -96,7 +95,6 @@ function getId($email) {
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">Contact Information</h5>
-              <a href="#"><i class="fas fa-pen"></i></a>
             </div>
             <h6>Email</h6>
             <p><i class="fas fa-envelope mr-2 align-middle"></i><?php echo $usersData['student_email'] ?></p>
@@ -112,7 +110,6 @@ function getId($email) {
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">Experience</h5>
-              <a href="#"><i class="fas fa-pen"></i></a>
             </div>
             <h6>Freelancer</h6>
             <h6>2019 - Present</h6>
@@ -126,7 +123,6 @@ function getId($email) {
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">Websites</h5>
-              <a href="#"><i class="fas fa-pen"></i></a>
             </div>
             <p><i class="fab fa-github mr-2 align-middle"></i><?php echo $usersData['student_github'] ?></p>
             <p><i class="fab fa-linkedin-in mr-2 align-middle"></i><?php echo $usersData['student_linkedin'] ?></p>
@@ -140,7 +136,6 @@ function getId($email) {
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">Skills</h5>
-              <a href="#"><i class="fas fa-pen"></i></a>
             </div>
             <p>HTML, CSS/Sass, Javascript, PHP, SQL, NPM, Git</p>
           </div>
@@ -153,7 +148,6 @@ function getId($email) {
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">Education</h5>
-              <a href="#"><i class="fas fa-pen"></i></a>
             </div>
             <h6>GMIT GALWAY</h6>
             <h6>2017 - Present</h6>
