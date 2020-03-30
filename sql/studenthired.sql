@@ -24,13 +24,15 @@ CREATE TABLE IF NOT EXISTS Students (
   student_skills VARCHAR(255) NULL,
   student_github VARCHAR(255) NULL,
   student_linkedin VARCHAR(255) NULL,
+  student_college VARCHAR(255) NULL,
+  student_course VARCHAR(255) NULL,
   student_picture VARCHAR(255) DEFAULT 'blank-profile-picture.png',
 PRIMARY KEY (student_id));
 
 -- Data for Students
 
-INSERT INTO Students (student_id, student_fullname, student_email, student_password, student_phone, student_location, student_bio, student_skills, student_github, student_linkedin, student_picture) VALUES
-(1, 'Glen Rouse', 'glen.rouse@gmail.com', 'Test', 0871234567, 'Co. Galway', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis dolorem obcaecati? Nihil possimus veritatis aliquid cupiditate ducimus ratione laudantium ex earum quo porro ad, perferendis tempore cum! Eligendi eos porro voluptates at laborum, fugit, minus, fuga autem recusandae beatae possimus dolorum! Excepturi vel placeat, nam fuga possimus obcaecati animi consequatur rerum! Eius voluptates asperiores veniam commodi reiciendis quos ut officia, aliquid eveniet eaque odit explicabo voluptatum, error, hic ullam cum facilis deserunt nemo consequatur!', 'HTML, CSS/Sass, Javascript, PHP, SQL, NPM, Git', 'github.com/glenr20', 'linkedin.com/in/glenrouse', 'blank-profile-picture.png');
+INSERT INTO Students (student_id, student_fullname, student_email, student_password, student_phone, student_location, student_bio, student_skills, student_github, student_linkedin, student_college, student_course, student_picture) VALUES
+(1, 'Glen Rouse', 'glen.rouse@gmail.com', 'Test', 0871234567, 'Co. Galway', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis dolorem obcaecati? Nihil possimus veritatis aliquid cupiditate ducimus ratione laudantium ex earum quo porro ad, perferendis tempore cum! Eligendi eos porro voluptates at laborum, fugit, minus, fuga autem recusandae beatae possimus dolorum! Excepturi vel placeat, nam fuga possimus obcaecati animi consequatur rerum! Eius voluptates asperiores veniam commodi reiciendis quos ut officia, aliquid eveniet eaque odit explicabo voluptatum, error, hic ullam cum facilis deserunt nemo consequatur!', 'HTML, CSS/Sass, Javascript, PHP, SQL, NPM, Git', 'github.com/glenr20', 'linkedin.com/in/glenrouse', 'GMIT GALWAY', 'Level 8 (Honours) in Computing and Digital Media', 'blank-profile-picture.png');
 
 -- Table Employers
 

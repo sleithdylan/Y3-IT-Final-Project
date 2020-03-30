@@ -341,8 +341,8 @@ img {
 /* Student Profile */
 .studentprofile .welcome {
   position: relative;
-  height: 80vh;
-  min-height: 1500px;
+  height: 100vh;
+  min-height: 1700px;
 }
 
 @media (max-width: 767.98px) {

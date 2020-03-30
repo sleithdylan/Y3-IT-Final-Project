@@ -21,6 +21,8 @@ if (isset($_POST['profile'])) {
   $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
   $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
   $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
+  $studentCollege = mysqli_real_escape_string($conn, $_POST['student-college']);
+  $studentCourse = mysqli_real_escape_string($conn, $_POST['student-course']);
   $studentPhone = mysqli_real_escape_string($conn, $_POST['student-phone']);
   $studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
   $studentSkills = mysqli_real_escape_string($conn, $_POST['student-skills']);
@@ -35,12 +37,6 @@ if (isset($_POST['profile'])) {
   // SELECT Query
   $query = "SELECT * FROM students ORDER BY student_id WHERE student_id = {$id}";
 
-  // Gets Result
-  $result = mysqli_query($conn, $query);
-
-  // Fetch Data
-  $lists = mysqli_fetch_assoc($result);
-
   $query = "UPDATE students SET 
       student_fullname = '$studentFullName',
       student_email = '$studentEmail',
@@ -50,6 +46,8 @@ if (isset($_POST['profile'])) {
       student_skills = '$studentSkills',
       student_github = '$studentGithub',
       student_linkedin = '$studentLinkedin',
+      student_college = '$studentCollege',
+      student_course = '$studentCourse',
       student_picture = '$studentPicture'
   WHERE student_id = {$id}";
 
@@ -150,6 +148,16 @@ mysqli_close($conn);
                   </div>
                   <hr>
                   <h6>Education</h6>
+                  <div class="form-group col-md-12">
+                    <label for="student-college">College</label>
+                    <input type="text" class="form-control" id="student-college" name="student-college"
+                      value="<?php echo $lists['student_college']; ?>" placeholder="College">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="student-course">Course</label>
+                    <input type="text" class="form-control" id="student-course" name="student-course"
+                      value="<?php echo $lists['student_course']; ?>" placeholder="Course">
+                  </div>
                   <hr>
                   <h6>Skills</h6>
                   <div class="form-group col-md-12">

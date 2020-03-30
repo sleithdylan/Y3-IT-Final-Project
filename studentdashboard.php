@@ -23,6 +23,8 @@ function getUsersData($studentId) {
     $array['student_skills'] = $row['student_skills'];
     $array['student_github'] = $row['student_github'];
     $array['student_linkedin'] = $row['student_linkedin'];
+    $array['student_college'] = $row['student_college'];
+    $array['student_course'] = $row['student_course'];
     $array['student_picture'] = $row['student_picture'];
   }
   return $array;
@@ -113,9 +115,8 @@ function getId($email) {
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">Education</h5>
             </div>
-            <h6>GMIT GALWAY</h6>
-            <h6>2017 - Present</h6>
-            <p>Level 8 (Honours) in Computing and Digital Media</p>
+            <h6><?php echo $usersData['student_college'] ?></h6>
+            <p><?php echo $usersData['student_course'] ?></p>
           </div>
         </div>
       </div>
