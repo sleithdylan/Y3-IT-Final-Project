@@ -20,6 +20,7 @@ function getUsersData($studentId) {
     $array['student_phone'] = $row['student_phone'];
     $array['student_location'] = $row['student_location'];
     $array['student_bio'] = $row['student_bio'];
+    $array['student_skills'] = $row['student_skills'];
     $array['student_github'] = $row['student_github'];
     $array['student_linkedin'] = $row['student_linkedin'];
   }
@@ -109,12 +110,11 @@ function getId($email) {
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
             <div class="d-flex justify-content-between align-items-start">
-              <h5 class="mr-3">Experience</h5>
+              <h5 class="mr-3">Education</h5>
             </div>
-            <h6>Freelancer</h6>
-            <h6>2019 - Present</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore inventore minus consectetur sunt
-              deserunt quas pariatur, aliquam aut obcaecati eligendi porro libero et repellat corporis.</p>
+            <h6>GMIT GALWAY</h6>
+            <h6>2017 - Present</h6>
+            <p>Level 8 (Honours) in Computing and Digital Media</p>
           </div>
         </div>
       </div>
@@ -137,21 +137,7 @@ function getId($email) {
             <div class="d-flex justify-content-between align-items-start">
               <h5 class="mr-3">Skills</h5>
             </div>
-            <p>HTML, CSS/Sass, Javascript, PHP, SQL, NPM, Git</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <div id="cardDiv" class="card my-3">
-          <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <h5 class="mr-3">Education</h5>
-            </div>
-            <h6>GMIT GALWAY</h6>
-            <h6>2017 - Present</h6>
-            <p>Level 8 (Honours) in Computing and Digital Media</p>
+            <p><?php echo $usersData['student_skills'] ?></p>
           </div>
         </div>
       </div>

@@ -28,6 +28,7 @@ if (isset($_POST['profile'])) {
   $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
   $studentPhone = mysqli_real_escape_string($conn, $_POST['student-phone']);
   $studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
+  $studentSkills = mysqli_real_escape_string($conn, $_POST['student-skills']);
   $studentGithub = mysqli_real_escape_string($conn, $_POST['student-github']);
   $studentLinkedin = mysqli_real_escape_string($conn, $_POST['student-linkedin']);
 
@@ -61,6 +62,7 @@ if (isset($_POST['profile'])) {
       student_phone = '$studentPhone', 
       student_location = '$studentLocation', 
       student_bio = '$studentBio',
+      student_skills = '$studentSkills',
       student_github = '$studentGithub',
       student_linkedin = '$studentLinkedin'
   WHERE student_id = {$id}";
@@ -142,11 +144,8 @@ mysqli_close($conn);
                     <input type="text" class="form-control" id="student-fullname" name="student-fullname"
                       value="<?php echo $lists['student_fullname']; ?>" placeholder="Full Name">
                   </div>
-                  <div class="form-group col-md-12">
-                    <label for="student-email">Email</label>
-                    <input type="email" class="form-control" id="student-email" name="student-email"
-                      value="<?php echo $lists['student_email']; ?>" placeholder="Email">
-                  </div>
+                  <input type="hidden" class="form-control" id="student-email" name="student-email"
+                    value="<?php echo $lists['student_email']; ?>" placeholder="Email">
                   <div class="form-group col-md-12">
                     <label for="student-phone">Phone</label>
                     <input type="text" class="form-control" id="student-phone" name="student-phone"
@@ -159,6 +158,11 @@ mysqli_close($conn);
                   </div>
                   <hr>
                   <div class="form-group col-md-12">
+                    <label for="student-skills">Skills</label>
+                    <input type="text" class="form-control" id="student-skills" name="student-skills"
+                      value="<?php echo $lists['student_skills']; ?>" placeholder="Skills">
+                  </div>
+                  <div class="form-group col-md-12">
                     <label for="student-github">GitHub</label>
                     <input type="text" class="form-control" id="student-github" name="student-github"
                       value="<?php echo $lists['student_github']; ?>" placeholder="GitHub">
@@ -168,6 +172,7 @@ mysqli_close($conn);
                     <input type="text" class="form-control" id="student-linkedin" name="student-linkedin"
                       value="<?php echo $lists['student_linkedin']; ?>" placeholder="LinkedIn">
                   </div>
+                  <hr>
                   <div class="form-group col-md-12">
                     <label for="student-about">About Me</label>
                     <textarea class="form-control" id="student-about" name="student-about"
