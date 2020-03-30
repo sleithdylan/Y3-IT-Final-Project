@@ -139,7 +139,7 @@ mysqli_close($conn);
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-location">Location</label>
-                    <input type="text" class="form-control" id="student-location" name="student-location"
+                    <input type="text" class="form-control" id="country" id="student-location" name="student-location"
                       value="<?php echo $lists['student_location']; ?>" placeholder="Location">
                   </div>
                   <hr>

@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/shards.min.css?v=3.0.0">
   <link rel="stylesheet" href="assets/css/shards-extras.min.css?version=3.0.0">
+  <link rel="stylesheet" href="assets/css/countrySelect.min.css">
 
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/1d6b99454b.js"></script>

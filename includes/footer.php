@@ -60,6 +60,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="./assets/js/main.js"></script>
+<script src="./assets/js/countrySelect.min.js"></script>
+<script>
+  $("#country").countrySelect({
+    defaultCountry: "ie",
+    preferredCountries: ['ie', 'gb', 'us'],
+    responsiveDropdown: true
+  });
+</script>
 </body>
 
 </html>
