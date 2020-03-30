@@ -16,6 +16,7 @@ if (isset($_POST['register'])) {
   // Gets form data
   $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
   $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
+  $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
   $studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
 
   // Hashed password
@@ -30,11 +31,11 @@ if (isset($_POST['register'])) {
   // Gets number of rows
   $numOfRows = mysqli_num_rows($result);
 
-  if (mysqli_query($conn, $query) && isset($studentFullName) && isset($studentEmail) && isset($studentPassword) && $numOfRows != 1) {
+  if (mysqli_query($conn, $query) && isset($studentFullName) && isset($studentEmail) && isset($studentLocation) && isset($studentPassword) && $numOfRows != 1) {
     // Passed
     // INSERT Query
-    $regQuery = "INSERT INTO students(student_fullname, student_email, student_password) 
-                  VALUES('$studentFullName', '$studentEmail', '$passwordHashed')";
+    $regQuery = "INSERT INTO students(student_fullname, student_email, student_location, student_password) 
+                  VALUES('$studentFullName', '$studentEmail', '$studentLocation', '$passwordHashed')";
     // Gets Result
     $result = mysqli_query($conn, $regQuery);
     $msg = '<strong>Success!</strong> You are now registered';
@@ -89,6 +90,11 @@ if (isset($_POST['register'])) {
                     <input type="email" class="form-control" id="student-email" name="student-email"
                       placeholder="Email">
                   </div>
+                </div>
+                <div class="form-group">
+                  <label for="student-location">Location</label>
+                  <input type="text" class="form-control" id="country" id="student-location" name="student-location"
+                    placeholder="Location">
                 </div>
                 <div class="form-group">
                   <label for="student-password">Password</label>

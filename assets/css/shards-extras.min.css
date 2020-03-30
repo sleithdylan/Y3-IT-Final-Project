@@ -207,7 +207,7 @@ img {
 .login .welcome {
   position: relative;
   height: 80vh;
-  min-height: 700px;
+  min-height: 800px;
 }
 
 @media (max-width: 767.98px) {
@@ -248,7 +248,7 @@ img {
 .signup .welcome {
   position: relative;
   height: 80vh;
-  min-height: 700px;
+  min-height: 800px;
 }
 
 @media (max-width: 767.98px) {
@@ -285,7 +285,7 @@ img {
   overflow: hidden;
 }
 
-/* Student Login */
+/* Add Job */
 .addjob .welcome {
   position: relative;
   height: 80vh;
