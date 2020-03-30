@@ -16,13 +16,8 @@ $email = $_SESSION['student_email'];
 
 // Checks for posted data
 if (isset($_POST['profile'])) {
-
-  // echo "<pre>", print_r($_FILES),"</pre>";
-  // echo "<pre>", print_r($_FILES['student-picture']),"</pre>";
-  // echo "<pre>", print_r($_FILES['student-picture']['name']),"</pre>";
-  
   // Gets form data
-  // $studentPicture = time() . '_' . $_FILES['student-picture']['name'];
+  $studentPicture = time() . '_' . $_FILES['student-picture']['name'];
   $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
   $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
   $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
@@ -32,17 +27,7 @@ if (isset($_POST['profile'])) {
   $studentGithub = mysqli_real_escape_string($conn, $_POST['student-github']);
   $studentLinkedin = mysqli_real_escape_string($conn, $_POST['student-linkedin']);
 
-  // $target = 'assets/images/profile-pictures/' . $studentPicture;
-
-  // if(move_uploaded_file($_FILES['student-picture']['tmp_name'], $target)){
-  //     $query = "INSERT INTO students(student_picture, student_fullname, student_email, student_phone, student_location, student_bio)
-  //     VALUES('$studentPicture', '$studentFullName', '$studentEmail', '$studentPhone', '$studentLocation', '$studentBio')";
-  // 		$msg = '<strong>Success!</strong> Image uploaded';
-  // 		$msgClass = 'alert-success alert-dismissible fade show';
-  // } else {
-  // 		$msg = '<strong>Error!</strong> Failed to upload image..';
-  // 		$msgClass = 'alert-danger alert-dismissible fade show';
-  // }
+  $target = 'assets/images/profile-pictures/' . $studentPicture;
 
   // Gets ID
   $id = mysqli_real_escape_string($conn, $_GET['id']);
@@ -64,11 +49,12 @@ if (isset($_POST['profile'])) {
       student_bio = '$studentBio',
       student_skills = '$studentSkills',
       student_github = '$studentGithub',
-      student_linkedin = '$studentLinkedin'
+      student_linkedin = '$studentLinkedin',
+      student_picture = '$studentPicture'
   WHERE student_id = {$id}";
 
   // Checks Required Fields
-  if (mysqli_query($conn, $query)) {
+  if (mysqli_query($conn, $query) && move_uploaded_file($_FILES['student-picture']['tmp_name'], $target)) {
     // Passed
     $msg = '<strong>Success!</strong> Profile has been edited!';
     $msgClass = 'alert-success alert-dismissible fade show';

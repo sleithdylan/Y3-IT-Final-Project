@@ -23,6 +23,7 @@ function getUsersData($studentId) {
     $array['student_skills'] = $row['student_skills'];
     $array['student_github'] = $row['student_github'];
     $array['student_linkedin'] = $row['student_linkedin'];
+    $array['student_picture'] = $row['student_picture'];
   }
   return $array;
 }
@@ -59,8 +60,8 @@ function getId($email) {
         <div id="cardDiv" class="card my-3">
           <div id="cardPost" class="card-body">
             <div class="text-center d-flex justify-content-center align-items-start">
-              <img src="./assets/images/profile-pictures/blank-profile-picture.png" class="rounded-circle mb-3"
-                alt="profile" height="100" width="100">
+              <img src="./assets/images/profile-pictures/<?php echo $usersData['student_picture'] ?>"
+                class="rounded-circle mb-3" alt="profile" height="100" width="100">
               <div class="profile-info d-flex flex-column justify-content-center align-items-start ml-4">
                 <div class="d-flex">
                   <h4 class="font-weight-bold mr-3"><?php echo $usersData['student_fullname'] ?></h4>
