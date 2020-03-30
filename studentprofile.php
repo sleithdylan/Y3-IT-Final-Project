@@ -119,6 +119,7 @@ mysqli_close($conn);
             <div class="card-body">
               <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" id="studentprofile"
                 enctype="multipart/form-data">
+                <h6>Basic Information</h6>
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="student-picture">Profile Picture</label>
@@ -142,12 +143,22 @@ mysqli_close($conn);
                     <input type="text" class="form-control" id="country" id="student-location" name="student-location"
                       value="<?php echo $lists['student_location']; ?>" placeholder="Location">
                   </div>
+                  <div class="form-group col-md-12">
+                    <label for="student-about">About</label>
+                    <textarea class="form-control" id="student-about" name="student-about"
+                      rows="6"><?php echo $lists['student_bio']; ?></textarea>
+                  </div>
                   <hr>
+                  <h6>Education</h6>
+                  <hr>
+                  <h6>Skills</h6>
                   <div class="form-group col-md-12">
                     <label for="student-skills">Skills</label>
                     <input type="text" class="form-control" id="student-skills" name="student-skills"
                       value="<?php echo $lists['student_skills']; ?>" placeholder="Skills">
                   </div>
+                  <hr>
+                  <h6>Websites</h6>
                   <div class="form-group col-md-12">
                     <label for="student-github">GitHub</label>
                     <input type="text" class="form-control" id="student-github" name="student-github"
@@ -158,13 +169,8 @@ mysqli_close($conn);
                     <input type="text" class="form-control" id="student-linkedin" name="student-linkedin"
                       value="<?php echo $lists['student_linkedin']; ?>" placeholder="LinkedIn">
                   </div>
-                  <hr>
-                  <div class="form-group col-md-12">
-                    <label for="student-about">About Me</label>
-                    <textarea class="form-control" id="student-about" name="student-about"
-                      rows="6"><?php echo $lists['student_bio']; ?></textarea>
-                  </div>
                 </div>
+                <hr>
                 <div class="d-flex">
                   <button type="submit" name="profile" class="btn btn-primary flex-grow-1">Edit Profile</button>
                 </div>

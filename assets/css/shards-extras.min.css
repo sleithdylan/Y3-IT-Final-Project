@@ -342,7 +342,7 @@ img {
 .studentprofile .welcome {
   position: relative;
   height: 80vh;
-  min-height: 1400px;
+  min-height: 1500px;
 }
 
 @media (max-width: 767.98px) {
