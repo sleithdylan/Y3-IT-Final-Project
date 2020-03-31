@@ -38,7 +38,7 @@ if (isset($_POST['delete'])) {
 }
 
 // SELECT Query
-$query = "SELECT * FROM jobs NATURAL JOIN (employers) WHERE employer_email = '$email' ORDER BY job_id ASC";
+$query = "SELECT * FROM jobs WHERE created_by = '$email' ORDER BY job_id ASC";
 
 // Gets Result
 $result = mysqli_query($conn, $query);
@@ -89,7 +89,10 @@ mysqli_close($conn);
             <h5><?php echo $list['job_company'] ?></h5>
             <h6><?php echo $list['job_location'] ?></h6>
             <p class="collapse"><?php echo $list['job_other_details'] ?></p>
-            <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
+            <div class="d-flex justify-content-between align-items-start">
+              <button type="button" class="btn btn-light mr-1 read-more mt-1">Read More</button>
+              <p class="mr-3">Created at: <?php echo $list['created_at'] ?></p>
+            </div>
           </div>
         </div>
         <?php endforeach; ?>

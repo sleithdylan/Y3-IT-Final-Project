@@ -23,8 +23,8 @@ if (isset($_POST['addjob'])) {
   $jobOtherDetails = mysqli_real_escape_string($conn, $_POST['job-other-details']);
 
   // INSERT Query
-  $query = "INSERT INTO jobs(job_title, job_company, job_location, job_other_details) 
-                VALUES('$jobRole', '$jobCompany', '$jobLocation', '$jobOtherDetails')";
+  $query = "INSERT INTO jobs(job_title, job_company, job_location, job_other_details, created_by) 
+                VALUES('$jobRole', '$jobCompany', '$jobLocation', '$jobOtherDetails', '$email')";
 
   // Checks Required Fields
   if (mysqli_query($conn, $query) && isset($jobRole) && isset($jobCompany) && isset($jobLocation) && isset($jobOtherDetails)) {
