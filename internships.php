@@ -13,6 +13,9 @@ $result = mysqli_query($conn, $query);
 // Fetch Data
 $lists = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+// Checks number of rows
+$numRows = mysqli_num_rows($result);
+
 // Free's result from memory
 mysqli_free_result($result);
 
@@ -32,8 +35,9 @@ mysqli_close($conn);
   <div class="d-flex flex-column my-5 inner-wrapper justify-contents-center container">
     <div class="row">
       <div class="col-md-12">
+        <!-- <div class="about-title d-flex justify-content-between align-items-end"></div> -->
         <h4 class="h4 text-black">Current Internships</h4>
-        <!-- <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, iste.</p> -->
+        <p class="text-black">Found: <?php echo $numRows ?></p>
       </div>
     </div>
     <div class="row">

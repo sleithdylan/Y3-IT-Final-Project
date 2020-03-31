@@ -65,7 +65,7 @@ if (isset($_POST['login'])) {
       <div class="row">
         <div class="col-md-8 mb-3 text-center mx-auto">
           <h3 class="welcome-heading h3 text-black">Log in</h3>
-          <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, iste.</p>
+          <p class="text-black">Sign in as a student to continue</p>
         </div>
       </div>
       <div class="row">

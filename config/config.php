@@ -1,10 +1,5 @@
 <?php
-// Defines Constants
-// define('DB_HOST', 'localhost');
-// define('DB_USER', 'root');
-// define('DB_PASS', '');
-// define('DB_NAME', 'studenthired');
-
+// Initialize Variables
 $DB_HOST = 'localhost';
 $DB_USER = 'root';
 $DB_PASS = '';
