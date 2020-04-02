@@ -59,7 +59,7 @@ function getId($email) {
     ?>
     <div class="row">
       <div class="col-md-12">
-        <div id="cardDiv" class="card my-3">
+        <div class="card my-3">
           <div id="cardPost" class="card-body">
             <div class="text-center d-flex justify-content-center align-items-start">
               <img src="./assets/images/profile-pictures/<?php echo $usersData['student_picture'] ?>"
@@ -85,21 +85,17 @@ function getId($email) {
     <?php } ?>
     <div class="row">
       <div class="col-md-8">
-        <div id="cardDiv" class="card my-3">
+        <div class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <h5 class="mr-3">About Me</h5>
-            </div>
+            <h5 class="mr-3">About Me</h5>
             <p><?php echo $usersData['student_bio'] ?></p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div id="cardDiv" class="card my-3">
+        <div class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <h5 class="mr-3">Contact Information</h5>
-            </div>
+            <h5 class="mr-3">Contact Information</h5>
             <h6>Email</h6>
             <p><i class="fas fa-envelope mr-2 align-middle"></i><?php echo $usersData['student_email'] ?></p>
             <h6>Phone</h6>
@@ -110,22 +106,18 @@ function getId($email) {
     </div>
     <div class="row">
       <div class="col-md-8">
-        <div id="cardDiv" class="card my-3">
+        <div class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <h5 class="mr-3">Education</h5>
-            </div>
+            <h5 class="mr-3">Education</h5>
             <h6><?php echo $usersData['student_college'] ?></h6>
             <p><?php echo $usersData['student_course'] ?></p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div id="cardDiv" class="card my-3">
+        <div class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <h5 class="mr-3">Websites</h5>
-            </div>
+            <h5 class="mr-3">Websites</h5>
             <p><i class="fab fa-github mr-2 align-middle"></i><?php echo $usersData['student_github'] ?></p>
             <p><i class="fab fa-linkedin-in mr-2 align-middle"></i><?php echo $usersData['student_linkedin'] ?></p>
           </div>
@@ -134,11 +126,9 @@ function getId($email) {
     </div>
     <div class="row">
       <div class="col-md-8">
-        <div id="cardDiv" class="card my-3">
+        <div class="card my-3">
           <div id="cardPost" class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <h5 class="mr-3">Skills</h5>
-            </div>
+            <h5 class="mr-3">Skills</h5>
             <p><?php echo $usersData['student_skills'] ?></p>
           </div>
         </div>
