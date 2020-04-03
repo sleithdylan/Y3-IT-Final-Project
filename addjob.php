@@ -16,29 +16,30 @@ $email = $_SESSION['email'];
 
 // Checks for posted data
 if (isset($_POST['addjob'])) {
-  // Gets form data
-  $jobRole = mysqli_real_escape_string($conn, $_POST['job-title']);
-  $jobCompany = mysqli_real_escape_string($conn, $_POST['job-company']);
-  $jobLocation = mysqli_real_escape_string($conn, $_POST['job-location']);
-  $jobOtherDetails = mysqli_real_escape_string($conn, $_POST['job-other-details']);
+	// Gets form data
+	$jobRole = mysqli_real_escape_string($conn, $_POST['job-title']);
+	$jobCompany = mysqli_real_escape_string($conn, $_POST['job-company']);
+	$jobLocation = mysqli_real_escape_string($conn, $_POST['job-location']);
+	$jobOtherDetails = mysqli_real_escape_string($conn, $_POST['job-other-details']);
 
-  // INSERT Query
-  $query = "INSERT INTO jobs(job_title, job_company, job_location, job_other_details, created_by) 
+	// INSERT Query
+	$query = "INSERT INTO jobs(job_title, job_company, job_location, job_other_details, created_by) 
                 VALUES('$jobRole', '$jobCompany', '$jobLocation', '$jobOtherDetails', '$email')";
 
-  // Checks Required Fields
-  if (mysqli_query($conn, $query) && isset($jobRole) && isset($jobCompany) && isset($jobLocation) && isset($jobOtherDetails)) {
-    // Passed
-    $msg = '<strong>Success!</strong> Job has been added';
-    $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to employerdashboard.php after 1 second
-    header('refresh:1; url=employerdashboard.php');
-  } else {
-    // Failed
-    // Returns error
-    $msg = '<strong>Error!</strong> Please fill in all fields correctly';
-    $msgClass = 'alert-danger alert-dismissible fade show';
-  }
+	// Checks Required Fields
+	if (mysqli_query($conn, $query) && isset($jobRole) && isset($jobCompany) && isset($jobLocation) && isset($jobOtherDetails)) {
+		// Passed
+		$msg = '<strong>Success!</strong> Job has been added';
+		$msgClass = 'alert-success alert-dismissible fade show';
+		// Redirects to employerdashboard.php after 1 second
+		header('refresh:1; url=employerdashboard.php');
+	}
+	else {
+		// Failed
+		// Returns error
+		$msg = '<strong>Error!</strong> Please fill in all fields correctly';
+		$msgClass = 'alert-danger alert-dismissible fade show';
+	}
 
 }
 

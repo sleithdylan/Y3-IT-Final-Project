@@ -16,24 +16,25 @@ $email = $_SESSION['email'];
 
 // Checks for posted data
 if (isset($_POST['delete'])) {
-  // Gets form data
-  $delete_id = mysqli_real_escape_string($conn, $_POST['delete-id']);
+	// Gets form data
+	$delete_id = mysqli_real_escape_string($conn, $_POST['delete-id']);
 
-  // DELETE Query
-  $query = "DELETE FROM jobs WHERE job_id = {$delete_id}";
+	// DELETE Query
+	$query = "DELETE FROM jobs WHERE job_id = {$delete_id}";
 
-  if (mysqli_query($conn, $query)) {
-    // Passed
-    $msg = '<strong>Success!</strong> Member has been deleted';
-    $msgClass = 'alert-success alert-dismissible fade show mt-4';
-    // Redirects to employerdashboard.php
-    header('refresh:1; url=employerdashboard.php');
-  } else {
-    // Failed
-    // Returns error
-    $msg = '<strong>Error!</strong> Something went wrong.. (' . mysqli_error($conn) . ')';
-    $msgClass = 'alert-danger alert-dismissible fade show my-4';
-  }
+	if (mysqli_query($conn, $query)) {
+		// Passed
+		$msg = '<strong>Success!</strong> Member has been deleted';
+		$msgClass = 'alert-success alert-dismissible fade show mt-4';
+		// Redirects to employerdashboard.php
+		header('refresh:1; url=employerdashboard.php');
+	}
+	else {
+		// Failed
+		// Returns error
+		$msg = '<strong>Error!</strong> Something went wrong.. (' . mysqli_error($conn) . ')';
+		$msgClass = 'alert-danger alert-dismissible fade show my-4';
+	}
 
 }
 

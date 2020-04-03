@@ -10,44 +10,45 @@ $msgClass = '';
 
 // Checks for posted data
 if (isset($_POST['register'])) {
-  // Starts session
-  session_start();
+	// Starts session
+	session_start();
 
-  // Gets form data
-  $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
-  $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
-  $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
-  $studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
+	// Gets form data
+	$studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
+	$studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
+	$studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
+	$studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
 
-  // Hashed password
-  $passwordHashed = password_hash($studentPassword, PASSWORD_DEFAULT);
+	// Hashed password
+	$passwordHashed = password_hash($studentPassword, PASSWORD_DEFAULT);
 
-  // SELECT Query
-  $query = "SELECT * FROM students WHERE student_email = '$studentEmail'";
+	// SELECT Query
+	$query = "SELECT * FROM students WHERE student_email = '$studentEmail'";
 
-  // Gets Result
-  $result = mysqli_query($conn, $query);
+	// Gets Result
+	$result = mysqli_query($conn, $query);
 
-  // Gets number of rows
-  $numOfRows = mysqli_num_rows($result);
+	// Gets number of rows
+	$numOfRows = mysqli_num_rows($result);
 
-  if (mysqli_query($conn, $query) && isset($studentFullName) && isset($studentEmail) && isset($studentLocation) && isset($studentPassword) && $numOfRows != 1) {
-    // Passed
-    // INSERT Query
-    $regQuery = "INSERT INTO students(student_fullname, student_email, student_location, student_password) 
+	if (mysqli_query($conn, $query) && isset($studentFullName) && isset($studentEmail) && isset($studentLocation) && isset($studentPassword) && $numOfRows != 1) {
+		// Passed
+		// INSERT Query
+		$regQuery = "INSERT INTO students(student_fullname, student_email, student_location, student_password) 
                   VALUES('$studentFullName', '$studentEmail', '$studentLocation', '$passwordHashed')";
-    // Gets Result
-    $result = mysqli_query($conn, $regQuery);
-    $msg = '<strong>Success!</strong> You are now registered';
-    $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to studentlogin.php after 1 second
-    header('refresh:1; url=studentlogin.php');
-  } else {
-    // Failed
-    // Returns error
-    $msg = '<strong>Error!</strong> Email taken...';
-    $msgClass = 'alert-danger alert-dismissible fade show my-4';
-  }
+		// Gets Result
+		$result = mysqli_query($conn, $regQuery);
+		$msg = '<strong>Success!</strong> You are now registered';
+		$msgClass = 'alert-success alert-dismissible fade show';
+		// Redirects to studentlogin.php after 1 second
+		header('refresh:1; url=studentlogin.php');
+	}
+	else {
+		// Failed
+		// Returns error
+		$msg = '<strong>Error!</strong> Email taken...';
+		$msgClass = 'alert-danger alert-dismissible fade show my-4';
+	}
 
 }
 

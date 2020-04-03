@@ -10,44 +10,45 @@ $msgClass = '';
 
 // Checks for posted data
 if (isset($_POST['login'])) {
-  // Starts session
-  session_start();
+	// Starts session
+	session_start();
 
-  // Gets form data
-  $employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
-  $employerPassword = mysqli_real_escape_string($conn, $_POST['employer-password']);
+	// Gets form data
+	$employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
+	$employerPassword = mysqli_real_escape_string($conn, $_POST['employer-password']);
 
-  // Puts variable into session variable
-  $_SESSION['email'] = $employerEmail;
+	// Puts variable into session variable
+	$_SESSION['email'] = $employerEmail;
 
-  // SELECT Query
-  $query = "SELECT * FROM employers WHERE employer_email = '$employerEmail' && BINARY employer_password = '$employerPassword'";
-  $hash = "SELECT employer_password FROM employers WHERE employer_email = '$employerEmail'";
+	// SELECT Query
+	$query = "SELECT * FROM employers WHERE employer_email = '$employerEmail' && BINARY employer_password = '$employerPassword'";
+	$hash = "SELECT employer_password FROM employers WHERE employer_email = '$employerEmail'";
 
-  // Gets Result
-  $result = mysqli_query($conn, $query);
-  $passwordHashed = mysqli_query($conn, $hash);
+	// Gets Result
+	$result = mysqli_query($conn, $query);
+	$passwordHashed = mysqli_query($conn, $hash);
 
-  // Returns all hashed passwords in an array
-  $lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
+	// Returns all hashed passwords in an array
+	$lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
 
-  // Gets number of rows
-  $numOfRows = mysqli_num_rows($result);
+	// Gets number of rows
+	$numOfRows = mysqli_num_rows($result);
 
-  if (mysqli_query($conn, $query) && isset($employerEmail) && isset($employerPassword) && $numOfRows == 1 || password_verify($employerPassword, $lists[0])) {
-    // Sets Cookie for 30 Days and then it will expire
-    setcookie('employer_email', $employerEmail, time() + 2592000);
-    // Passed
-    $msg = '<strong>Success!</strong> You have logged in';
-    $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to employerdashboard.php after 1 second
-    header('refresh:1;url=employerdashboard.php');
-  } else {
-    // Failed
-    // Returns error
-    $msg = '<strong>Error!</strong> Something went wrong..';
-    $msgClass = 'alert-danger alert-dismissible fade show my-4';
-  }
+	if (mysqli_query($conn, $query) && isset($employerEmail) && isset($employerPassword) && $numOfRows == 1 || password_verify($employerPassword, $lists[0])) {
+		// Sets Cookie for 30 Days and then it will expire
+		setcookie('employer_email', $employerEmail, time() + 2592000);
+		// Passed
+		$msg = '<strong>Success!</strong> You have logged in';
+		$msgClass = 'alert-success alert-dismissible fade show';
+		// Redirects to employerdashboard.php after 1 second
+		header('refresh:1;url=employerdashboard.php');
+	}
+	else {
+		// Failed
+		// Returns error
+		$msg = '<strong>Error!</strong> Something went wrong..';
+		$msgClass = 'alert-danger alert-dismissible fade show my-4';
+	}
 
 }
 

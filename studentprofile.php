@@ -16,28 +16,28 @@ $email = $_SESSION['student_email'];
 
 // Checks for posted data
 if (isset($_POST['profile'])) {
-  // Gets form data
-  $studentPicture = time() . '_' . $_FILES['student-picture']['name'];
-  $studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
-  $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
-  $studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
-  $studentCollege = mysqli_real_escape_string($conn, $_POST['student-college']);
-  $studentCourse = mysqli_real_escape_string($conn, $_POST['student-course']);
-  $studentPhone = mysqli_real_escape_string($conn, $_POST['student-phone']);
-  $studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
-  $studentSkills = mysqli_real_escape_string($conn, $_POST['student-skills']);
-  $studentGithub = mysqli_real_escape_string($conn, $_POST['student-github']);
-  $studentLinkedin = mysqli_real_escape_string($conn, $_POST['student-linkedin']);
+	// Gets form data
+	$studentPicture = time() . '_' . $_FILES['student-picture']['name'];
+	$studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
+	$studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
+	$studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
+	$studentCollege = mysqli_real_escape_string($conn, $_POST['student-college']);
+	$studentCourse = mysqli_real_escape_string($conn, $_POST['student-course']);
+	$studentPhone = mysqli_real_escape_string($conn, $_POST['student-phone']);
+	$studentBio = mysqli_real_escape_string($conn, $_POST['student-about']);
+	$studentSkills = mysqli_real_escape_string($conn, $_POST['student-skills']);
+	$studentGithub = mysqli_real_escape_string($conn, $_POST['student-github']);
+	$studentLinkedin = mysqli_real_escape_string($conn, $_POST['student-linkedin']);
 
-  $target = 'assets/images/profile-pictures/' . $studentPicture;
+	$target = 'assets/images/profile-pictures/' . $studentPicture;
 
-  // Gets ID
-  $id = mysqli_real_escape_string($conn, $_GET['id']);
+	// Gets ID
+	$id = mysqli_real_escape_string($conn, $_GET['id']);
 
-  // SELECT Query
-  $query = "SELECT * FROM students ORDER BY student_id WHERE student_id = {$id}";
+	// SELECT Query
+	$query = "SELECT * FROM students ORDER BY student_id WHERE student_id = {$id}";
 
-  $query = "UPDATE students SET 
+	$query = "UPDATE students SET 
       student_fullname = '$studentFullName',
       student_email = '$studentEmail',
       student_phone = '$studentPhone', 
@@ -51,28 +51,28 @@ if (isset($_POST['profile'])) {
       student_picture = '$studentPicture'
   WHERE student_id = {$id}";
 
-  // Checks Required Fields
-  if (mysqli_query($conn, $query) && move_uploaded_file($_FILES['student-picture']['tmp_name'], $target)) {
-    // Passed
-    $msg = '<strong>Success!</strong> Profile has been edited!';
-    $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to employerdashboard.php after 1 second
-    header('refresh:1; url=studentdashboard.php');
-  }
-  else {
-    // Failed
-    // Returns error
-    $msg = '<strong>Error!</strong> Please fill in all fields correctly';
-    $msgClass = 'alert-danger alert-dismissible fade show';
-  }
+	// Checks Required Fields
+	if (mysqli_query($conn, $query) && move_uploaded_file($_FILES['student-picture']['tmp_name'], $target)) {
+		// Passed
+		$msg = '<strong>Success!</strong> Profile has been edited!';
+		$msgClass = 'alert-success alert-dismissible fade show';
+		// Redirects to employerdashboard.php after 1 second
+		header('refresh:1; url=studentdashboard.php');
+	}
+	else {
+		// Failed
+		// Returns error
+		$msg = '<strong>Error!</strong> Please fill in all fields correctly';
+		$msgClass = 'alert-danger alert-dismissible fade show';
+	}
 
 }
 
-  // Gets ID
-  $id = mysqli_real_escape_string($conn, $_GET['id']);
+// Gets ID
+$id = mysqli_real_escape_string($conn, $_GET['id']);
 
-  // SELECT Query
-  $query = "SELECT * FROM students WHERE student_id = {$id}";
+// SELECT Query
+$query = "SELECT * FROM students WHERE student_id = {$id}";
 
 // Gets Result
 $result = mysqli_query($conn, $query);
@@ -80,7 +80,6 @@ $result = mysqli_query($conn, $query);
 // Fetch Data
 $lists = mysqli_fetch_assoc($result);
 // var_dump($lists);
-
 // Free's result from memory
 mysqli_free_result($result);
 

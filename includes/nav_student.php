@@ -28,7 +28,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="./studentdashboard.php">Dashboard</a>
-            <a class="dropdown-item" href="./studentprofile.php?id=2">Profile</a>
+            <a class="dropdown-item" href="./studentprofile.php?id=<?php echo $usersData['student_id'] ?>">Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-danger" href="./studentlogout.php">Logout</a>
           </div>

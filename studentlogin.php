@@ -10,44 +10,45 @@ $msgClass = '';
 
 // Checks for posted data
 if (isset($_POST['login'])) {
-  // Starts session
-  session_start();
+	// Starts session
+	session_start();
 
-  // Gets form data
-  $studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
-  $studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
+	// Gets form data
+	$studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
+	$studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
 
-  // Puts variable into session variable
-  $_SESSION['student_email'] = $studentEmail;
+	// Puts variable into session variable
+	$_SESSION['student_email'] = $studentEmail;
 
-  // SELECT Query
-  $query = "SELECT * FROM students WHERE student_email = '$studentEmail' && BINARY student_password = '$studentPassword'";
-  $hash = "SELECT student_password FROM students WHERE student_email = '$studentEmail'";
+	// SELECT Query
+	$query = "SELECT * FROM students WHERE student_email = '$studentEmail' && BINARY student_password = '$studentPassword'";
+	$hash = "SELECT student_password FROM students WHERE student_email = '$studentEmail'";
 
-  // Gets Result
-  $result = mysqli_query($conn, $query);
-  $passwordHashed = mysqli_query($conn, $hash);
+	// Gets Result
+	$result = mysqli_query($conn, $query);
+	$passwordHashed = mysqli_query($conn, $hash);
 
-  // Returns all hashed passwords in an array
-  $lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
+	// Returns all hashed passwords in an array
+	$lists = mysqli_fetch_array($passwordHashed, MYSQLI_NUM);
 
-  // Gets number of rows
-  $numOfRows = mysqli_num_rows($result);
+	// Gets number of rows
+	$numOfRows = mysqli_num_rows($result);
 
-  if (mysqli_query($conn, $query) && isset($studentEmail) && isset($studentPassword) && $numOfRows == 1 || password_verify($studentPassword, $lists[0])) {
-    // Sets Cookie for 30 Days and then it will expire
-    setcookie('student_email', $studentEmail, time() + 2592000);
-    // Passed
-    $msg = '<strong>Success!</strong> You have logged in';
-    $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to studentdashboard.php after 1 second
-    header('refresh:1;url=studentdashboard.php');
-  } else {
-    // Failed
-    // Returns error
-    $msg = '<strong>Error!</strong> Something went wrong..';
-    $msgClass = 'alert-danger alert-dismissible fade show my-4';
-  }
+	if (mysqli_query($conn, $query) && isset($studentEmail) && isset($studentPassword) && $numOfRows == 1 || password_verify($studentPassword, $lists[0])) {
+		// Sets Cookie for 30 Days and then it will expire
+		setcookie('student_email', $studentEmail, time() + 2592000);
+		// Passed
+		$msg = '<strong>Success!</strong> You have logged in';
+		$msgClass = 'alert-success alert-dismissible fade show';
+		// Redirects to studentdashboard.php after 1 second
+		header('refresh:1;url=studentdashboard.php');
+	}
+	else {
+		// Failed
+		// Returns error
+		$msg = '<strong>Error!</strong> Something went wrong..';
+		$msgClass = 'alert-danger alert-dismissible fade show my-4';
+	}
 
 }
 

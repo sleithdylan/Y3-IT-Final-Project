@@ -10,43 +10,44 @@ $msgClass = '';
 
 // Checks for posted data
 if (isset($_POST['register'])) {
-  // Starts session
-  session_start();
+	// Starts session
+	session_start();
 
-  // Gets form data
-  $employerFullName = mysqli_real_escape_string($conn, $_POST['employer-fullname']);
-  $employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
-  $employerPassword = mysqli_real_escape_string($conn, $_POST['employer-password']);
+	// Gets form data
+	$employerFullName = mysqli_real_escape_string($conn, $_POST['employer-fullname']);
+	$employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
+	$employerPassword = mysqli_real_escape_string($conn, $_POST['employer-password']);
 
-  // Hashed password
-  $passwordHashed = password_hash($employerPassword, PASSWORD_DEFAULT);
+	// Hashed password
+	$passwordHashed = password_hash($employerPassword, PASSWORD_DEFAULT);
 
-  // SELECT Query
-  $query = "SELECT * FROM employers WHERE employer_email = '$employerEmail'";
+	// SELECT Query
+	$query = "SELECT * FROM employers WHERE employer_email = '$employerEmail'";
 
-  // Gets Result
-  $result = mysqli_query($conn, $query);
+	// Gets Result
+	$result = mysqli_query($conn, $query);
 
-  // Gets number of rows
-  $numOfRows = mysqli_num_rows($result);
+	// Gets number of rows
+	$numOfRows = mysqli_num_rows($result);
 
-  if (mysqli_query($conn, $query) && isset($employerFullName) && isset($employerEmail) && isset($employerPassword) && $numOfRows != 1) {
-    // Passed
-    // INSERT Query
-    $regQuery = "INSERT INTO employers(employer_fullname, employer_email, employer_password) 
+	if (mysqli_query($conn, $query) && isset($employerFullName) && isset($employerEmail) && isset($employerPassword) && $numOfRows != 1) {
+		// Passed
+		// INSERT Query
+		$regQuery = "INSERT INTO employers(employer_fullname, employer_email, employer_password) 
                   VALUES('$employerFullName', '$employerEmail', '$passwordHashed')";
-    // Gets Result
-    $result = mysqli_query($conn, $regQuery);
-    $msg = '<strong>Success!</strong> You are now registered';
-    $msgClass = 'alert-success alert-dismissible fade show';
-    // Redirects to employerlogin.php after 1 second
-    header('refresh:1; url=employerlogin.php');
-  } else {
-    // Failed
-    // Returns error
-    $msg = '<strong>Error!</strong> Email taken...';
-    $msgClass = 'alert-danger alert-dismissible fade show my-4';
-  }
+		// Gets Result
+		$result = mysqli_query($conn, $regQuery);
+		$msg = '<strong>Success!</strong> You are now registered';
+		$msgClass = 'alert-success alert-dismissible fade show';
+		// Redirects to employerlogin.php after 1 second
+		header('refresh:1; url=employerlogin.php');
+	}
+	else {
+		// Failed
+		// Returns error
+		$msg = '<strong>Error!</strong> Email taken...';
+		$msgClass = 'alert-danger alert-dismissible fade show my-4';
+	}
 
 }
 
