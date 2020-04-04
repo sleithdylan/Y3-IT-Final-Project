@@ -80,17 +80,17 @@ if (isset($_POST['login'])) {
           <?php endif; ?>
           <div class="card">
             <div class="card-body">
-              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate>
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="student-email">Email</label>
-                    <input type="email" class="form-control" id="student-email" name="student-email"
-                      placeholder="Email">
+                    <input type="email" class="form-control" id="student-email" name="student-email" placeholder="Email"
+                      required>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-password">Password</label>
                     <input type="password" class="form-control" id="student-password" name="student-password"
-                      placeholder="Password">
+                      placeholder="Password" required>
                   </div>
                 </div>
                 <div class="d-flex">

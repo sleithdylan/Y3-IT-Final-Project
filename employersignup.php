@@ -79,28 +79,52 @@ if (isset($_POST['register'])) {
           <?php endif; ?>
           <div class="card">
             <div class="card-body">
-              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="employer-fullname">Full Name</label>
                     <input type="text" class="form-control" id="employer-fullname" name="employer-fullname"
-                      placeholder="Full Name">
+                      placeholder="Full Name" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid name.
+                    </div>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="employer-email">Email</label>
                     <input type="email" class="form-control" id="employer-email" name="employer-email"
-                      placeholder="Email">
+                      placeholder="Email" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid email.
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="employer-location">Location</label>
                   <input type="text" class="form-control" id="country" id="employer-location" name="employer-location"
-                    placeholder="Location">
+                    placeholder="Location" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter a valid location.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="employer-password">Password</label>
                   <input type="password" class="form-control" id="employer-password" name="employer-password"
-                    placeholder="Password">
+                    placeholder="Password" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter a password.
+                  </div>
                 </div>
                 <div class="d-flex">
                   <button type="submit" name="register" class="btn btn-primary flex-grow-1">Sign Up</button>

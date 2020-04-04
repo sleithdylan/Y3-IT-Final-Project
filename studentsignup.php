@@ -79,28 +79,52 @@ if (isset($_POST['register'])) {
           <?php endif; ?>
           <div class="card">
             <div class="card-body">
-              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="student-fullname">Full Name</label>
                     <input type="text" class="form-control" id="student-fullname" name="student-fullname"
-                      placeholder="Full Name">
+                      placeholder="Full Name" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid name.
+                    </div>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="student-email">Email</label>
-                    <input type="email" class="form-control" id="student-email" name="student-email"
-                      placeholder="Email">
+                    <input type="email" class="form-control" id="student-email" name="student-email" placeholder="Email"
+                      required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid email.
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="student-location">Location</label>
                   <input type="text" class="form-control" id="country" id="student-location" name="student-location"
-                    placeholder="Location">
+                    placeholder="Location" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter a valid location.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="student-password">Password</label>
                   <input type="password" class="form-control" id="student-password" name="student-password"
-                    placeholder="Password">
+                    placeholder="Password" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter a password.
+                  </div>
                 </div>
                 <div class="d-flex">
                   <button type="submit" name="register" class="btn btn-primary flex-grow-1">Sign Up</button>

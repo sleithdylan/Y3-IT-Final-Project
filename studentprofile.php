@@ -115,66 +115,126 @@ mysqli_close($conn);
           <div class="card">
             <div class="card-body">
               <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" id="studentprofile"
-                enctype="multipart/form-data">
+                enctype="multipart/form-data" class="needs-validation" novalidate>
                 <h6>Basic Information</h6>
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="student-picture">Profile Picture</label>
                     <input type="file" class="form-control" id="student-picture" name="student-picture"
-                      placeholder="Insert Image">
+                      placeholder="Insert Image" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please select a valid picture.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-fullname">Full Name</label>
                     <input type="text" class="form-control" id="student-fullname" name="student-fullname"
-                      value="<?php echo $lists['student_fullname']; ?>" placeholder="Full Name">
+                      value="<?php echo $lists['student_fullname']; ?>" placeholder="Full Name" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid name.
+                    </div>
                   </div>
                   <input type="hidden" class="form-control" id="student-email" name="student-email"
-                    value="<?php echo $lists['student_email']; ?>" placeholder="Email">
+                    value="<?php echo $lists['student_email']; ?>" placeholder="Email" required>
                   <div class="form-group col-md-12">
                     <label for="student-phone">Phone</label>
                     <input type="text" class="form-control" id="student-phone" name="student-phone"
-                      value="<?php echo $lists['student_phone']; ?>" placeholder="Phone">
+                      value="<?php echo $lists['student_phone']; ?>" placeholder="Phone" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid phone #.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-location">Location</label>
                     <input type="text" class="form-control" id="country" id="student-location" name="student-location"
-                      value="<?php echo $lists['student_location']; ?>" placeholder="Location">
+                      value="<?php echo $lists['student_location']; ?>" placeholder="Location" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid location.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-about">About</label>
-                    <textarea class="form-control" id="student-about" name="student-about"
-                      rows="6"><?php echo $lists['student_bio']; ?></textarea>
+                    <textarea class="form-control" id="student-about" name="student-about" rows="6"
+                      required><?php echo $lists['student_bio']; ?></textarea>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid bio.
+                    </div>
                   </div>
                   <hr>
                   <h6>Education</h6>
                   <div class="form-group col-md-12">
                     <label for="student-college">College</label>
                     <input type="text" class="form-control" id="student-college" name="student-college"
-                      value="<?php echo $lists['student_college']; ?>" placeholder="College">
+                      value="<?php echo $lists['student_college']; ?>" placeholder="College" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid college.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-course">Course</label>
                     <input type="text" class="form-control" id="student-course" name="student-course"
-                      value="<?php echo $lists['student_course']; ?>" placeholder="Course">
+                      value="<?php echo $lists['student_course']; ?>" placeholder="Course" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid course.
+                    </div>
                   </div>
                   <hr>
                   <h6>Skills</h6>
                   <div class="form-group col-md-12">
                     <label for="student-skills">Skills</label>
                     <input type="text" class="form-control" id="student-skills" name="student-skills"
-                      value="<?php echo $lists['student_skills']; ?>" placeholder="Skills">
+                      value="<?php echo $lists['student_skills']; ?>" placeholder="Skills" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter valid skills.
+                    </div>
                   </div>
                   <hr>
                   <h6>Websites</h6>
                   <div class="form-group col-md-12">
                     <label for="student-github">GitHub</label>
                     <input type="text" class="form-control" id="student-github" name="student-github"
-                      value="<?php echo $lists['student_github']; ?>" placeholder="GitHub">
+                      value="<?php echo $lists['student_github']; ?>" placeholder="GitHub" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid url.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="student-linkedin">LinkedIn</label>
                     <input type="text" class="form-control" id="student-linkedin" name="student-linkedin"
-                      value="<?php echo $lists['student_linkedin']; ?>" placeholder="LinkedIn">
+                      value="<?php echo $lists['student_linkedin']; ?>" placeholder="LinkedIn" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid url.
+                    </div>
                   </div>
                 </div>
                 <hr>

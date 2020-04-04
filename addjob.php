@@ -71,24 +71,51 @@ if (isset($_POST['addjob'])) {
           <?php endif; ?>
           <div class="card">
             <div class="card-body">
-              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" id="addjob">
+              <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" id="addjob" class="needs-validation"
+                novalidate>
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="job-title">Role</label>
-                    <input type="text" class="form-control" id="job-title" name="job-title" placeholder="Role">
+                    <input type="text" class="form-control" id="job-title" name="job-title" placeholder="Role" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid role.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="job-company">Company</label>
-                    <input type="text" class="form-control" id="job-company" name="job-company" placeholder="Company">
+                    <input type="text" class="form-control" id="job-company" name="job-company" placeholder="Company"
+                      required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid company.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="job-location">Location</label>
-                    <input type="text" class="form-control" id="job-location" name="job-location"
-                      placeholder="Location">
+                    <input type="text" class="form-control" id="job-location" name="job-location" placeholder="Location"
+                      required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter a valid location.
+                    </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="job-other-details">Other</label>
-                    <textarea class="form-control" id="job-other-details" name="job-other-details" rows="6"></textarea>
+                    <textarea class="form-control" id="job-other-details" name="job-other-details" rows="6"
+                      required></textarea>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please enter valid information.
+                    </div>
                   </div>
                 </div>
                 <div class="d-flex">
