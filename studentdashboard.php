@@ -2,6 +2,7 @@
 // Starts session
 session_start();
 
+// Puts session variable into $email
 $email = $_SESSION['student_email'];
 
 function getUsersData($studentId) {
@@ -11,7 +12,6 @@ function getUsersData($studentId) {
 	require('config/db.php');
 	$array = array();
 	$query = mysqli_query($conn, "SELECT * FROM students WHERE student_id=" . $studentId);
-	// $result = mysqli_query($conn, $query);
 	while ($row = mysqli_fetch_assoc($query)) {
 		$array['student_id'] = $row['student_id'];
 		$array['student_fullname'] = $row['student_fullname'];
@@ -32,9 +32,9 @@ function getUsersData($studentId) {
 
 function getId($email) {
 	// Requires Config
-	require ('config/config.php');
+	require('config/config.php');
 	// Creates and Checks Connection
-	require ('config/db.php');
+	require('config/db.php');
 	$query = mysqli_query($conn, "SELECT student_id FROM students WHERE student_email='" . $email . "'");
 	while ($row = mysqli_fetch_assoc($query)) {
 		return $row['student_id'];
@@ -46,10 +46,9 @@ function getId($email) {
 <!-- Header -->
 <?php include ('includes/header.php'); ?>
 
+<!-- Gets user data from id -->
 <?php if (isset($_SESSION['student_email'])) {
-
 	$usersData = getUsersData(getId($_SESSION['student_email']));
-
 ?>
 
 <body>
@@ -83,7 +82,6 @@ function getId($email) {
         </div>
       </div>
     </div>
-    <?php } ?>
     <div class="row">
       <div class="col-md-8">
         <div class="card my-3">
@@ -136,5 +134,6 @@ function getId($email) {
       </div>
     </div>
   </div>
+  <?php } ?>
   <!-- Footer -->
   <?php include('includes/footer.php'); ?>

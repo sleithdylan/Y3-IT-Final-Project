@@ -35,7 +35,6 @@ mysqli_close($conn);
   <div class="d-flex flex-column my-5 inner-wrapper justify-contents-center container">
     <div class="row">
       <div class="col-md-12">
-        <!-- <div class="about-title d-flex justify-content-between align-items-end"></div> -->
         <h4 class="h4 text-black">Current Internships</h4>
         <p class="text-black">Found: <?php echo $numRows ?></p>
       </div>

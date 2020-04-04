@@ -11,7 +11,7 @@ require('config/db.php');
 $msg = '';
 $msgClass = '';
 
-// Puts session variable into $username
+// Puts session variable into $email
 $email = $_SESSION['student_email'];
 
 // Checks for posted data
@@ -79,7 +79,7 @@ $result = mysqli_query($conn, $query);
 
 // Fetch Data
 $lists = mysqli_fetch_assoc($result);
-// var_dump($lists);
+
 // Free's result from memory
 mysqli_free_result($result);
 

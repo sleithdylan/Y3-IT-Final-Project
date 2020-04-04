@@ -1,14 +1,14 @@
 -- Drop database if exists
 
--- DROP DATABASE IF EXISTS studenthired;
+DROP DATABASE IF EXISTS studenthired;
 
 -- Create database
 
--- CREATE DATABASE studenthired CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE studenthired CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Use database
 
--- USE studenthired;
+USE studenthired;
 
 -- Table Students
 
@@ -32,7 +32,7 @@ PRIMARY KEY (student_id));
 -- Data for Students
 
 INSERT INTO Students (student_id, student_fullname, student_email, student_password, student_phone, student_location, student_bio, student_skills, student_github, student_linkedin, student_college, student_course, student_picture) VALUES
-(1, 'Glen Rouse', 'glen.rouse@gmail.com', 'Test', 0871234567, 'Co. Galway', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis dolorem obcaecati? Nihil possimus veritatis aliquid cupiditate ducimus ratione laudantium ex earum quo porro ad, perferendis tempore cum! Eligendi eos porro voluptates at laborum, fugit, minus, fuga autem recusandae beatae possimus dolorum! Excepturi vel placeat, nam fuga possimus obcaecati animi consequatur rerum! Eius voluptates asperiores veniam commodi reiciendis quos ut officia, aliquid eveniet eaque odit explicabo voluptatum, error, hic ullam cum facilis deserunt nemo consequatur!', 'HTML, CSS/Sass, Javascript, PHP, SQL, NPM, Git', 'github.com/glenr20', 'linkedin.com/in/glenrouse', 'GMIT GALWAY', 'Level 8 (Honours) in Computing and Digital Media', 'blank-profile-picture.png');
+(1, 'Glen Rouse', 'glen.rouse@gmail.com', '$2y$10$DwG6DQ9lsbVY7BHH77Z3L.6zGd.eXjx8z6fD0mcfAfVPcu5EusZ2i', 0871234567, 'Co. Galway', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis dolorem obcaecati? Nihil possimus veritatis aliquid cupiditate ducimus ratione laudantium ex earum quo porro ad, perferendis tempore cum! Eligendi eos porro voluptates at laborum, fugit, minus, fuga autem recusandae beatae possimus dolorum! Excepturi vel placeat, nam fuga possimus obcaecati animi consequatur rerum! Eius voluptates asperiores veniam commodi reiciendis quos ut officia, aliquid eveniet eaque odit explicabo voluptatum, error, hic ullam cum facilis deserunt nemo consequatur!', 'HTML, CSS/Sass, Javascript, PHP, SQL, NPM, Git', 'github.com/glenr20', 'linkedin.com/in/glenrouse', 'GMIT GALWAY', 'Level 8 (Honours) in Computing and Digital Media', 'blank-profile-picture.png');
 
 -- Table Employers
 

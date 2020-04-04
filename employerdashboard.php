@@ -11,7 +11,7 @@ require('config/db.php');
 $msg = '';
 $msgClass = '';
 
-// Puts session variable into $username
+// Puts session variable into $email
 $email = $_SESSION['email'];
 
 // Checks for posted data
