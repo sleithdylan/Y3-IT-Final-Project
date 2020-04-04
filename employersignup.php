@@ -15,7 +15,8 @@ if (isset($_POST['register'])) {
 
 	// Gets form data
 	$employerFullName = mysqli_real_escape_string($conn, $_POST['employer-fullname']);
-	$employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
+  $employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
+  $employerLocation = mysqli_real_escape_string($conn, $_POST['employer-location']);
 	$employerPassword = mysqli_real_escape_string($conn, $_POST['employer-password']);
 
 	// Hashed password
@@ -30,11 +31,11 @@ if (isset($_POST['register'])) {
 	// Gets number of rows
 	$numOfRows = mysqli_num_rows($result);
 
-	if (mysqli_query($conn, $query) && isset($employerFullName) && isset($employerEmail) && isset($employerPassword) && $numOfRows != 1) {
+	if (mysqli_query($conn, $query) && isset($employerFullName) && isset($employerEmail) && isset($employerLocation) && isset($employerPassword) && $numOfRows != 1) {
 		// Passed
 		// INSERT Query
-		$regQuery = "INSERT INTO employers(employer_fullname, employer_email, employer_password) 
-                  VALUES('$employerFullName', '$employerEmail', '$passwordHashed')";
+		$regQuery = "INSERT INTO employers(employer_fullname, employer_email, employer_location, employer_password) 
+                  VALUES('$employerFullName', '$employerEmail', '$employerLocation', '$passwordHashed')";
 		// Gets Result
 		$result = mysqli_query($conn, $regQuery);
 		$msg = '<strong>Success!</strong> You are now registered';
@@ -90,6 +91,11 @@ if (isset($_POST['register'])) {
                     <input type="email" class="form-control" id="employer-email" name="employer-email"
                       placeholder="Email">
                   </div>
+                </div>
+                <div class="form-group">
+                  <label for="employer-location">Location</label>
+                  <input type="text" class="form-control" id="country" id="employer-location" name="employer-location"
+                    placeholder="Location">
                 </div>
                 <div class="form-group">
                   <label for="employer-password">Password</label>

@@ -41,13 +41,14 @@ CREATE TABLE IF NOT EXISTS Employers (
   employer_id SMALLINT(3) NOT NULL AUTO_INCREMENT,
   employer_fullname VARCHAR(255) NOT NULL,
   employer_email VARCHAR(255) NOT NULL,
+  employer_location VARCHAR(255) NULL,
   employer_password VARCHAR(255) NOT NULL,
 PRIMARY KEY (employer_id));
 
 -- Data for Employers
 
-INSERT INTO Employers (employer_id, employer_fullname, employer_email, employer_password) VALUES
-(1, 'Lara Thayer', 'larat90@gmail.com', 'Test');
+INSERT INTO Employers (employer_id, employer_fullname, employer_email, employer_location, employer_password) VALUES
+(1, 'Lara Thayer', 'larat90@gmail.com', 'Ireland', '$2y$10$04PNj9PGqcazzGjZ82jUjum7zT.1iWgEFJH5c47MfypXN/6RfzLB2');
 
 -- Table Jobs
 
