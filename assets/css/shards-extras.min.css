@@ -162,11 +162,11 @@ img {
   }
 }
 
-/* Student Signup */
+/* Signup */
 .signup .welcome {
   position: relative;
   height: 80vh;
-  min-height: 700px;
+  min-height: 850px;
 }
 
 @media (max-width: 767.98px) {
@@ -203,7 +203,7 @@ img {
   overflow: hidden;
 }
 
-/* Student Login */
+/* Login */
 .login .welcome {
   position: relative;
   height: 80vh;
@@ -244,52 +244,11 @@ img {
   overflow: hidden;
 }
 
-/* Student Signup */
-.signup .welcome {
-  position: relative;
-  height: 80vh;
-  min-height: 800px;
-}
-
-@media (max-width: 767.98px) {
-  .signup .welcome .inner-wrapper {
-    text-align: center;
-  }
-}
-@media (max-width: 400px) {
-  .signup .welcome .welcome-heading {
-    font-size: 2.415rem;
-  }
-}
-.signup .section-title {
-  position: relative;
-}
-
-.signup .feature .icon {
-  border-radius: 50%;
-  min-width: 65px;
-  height: 65px;
-  line-height: 65px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(33, 37, 41, 0.1), 0 7px 14px rgba(33, 37, 41, 0.1);
-  font-size: 27px;
-}
-.signup .section {
-  border-bottom: 1px solid #eaebed;
-}
-.signup .section-invert {
-  background: #f9fafc;
-}
-.signup .testimonials .avatar {
-  max-width: 80px;
-  overflow: hidden;
-}
-
 /* Add Job */
 .addjob .welcome {
   position: relative;
   height: 80vh;
-  min-height: 900px;
+  min-height: 950px;
 }
 
 @media (max-width: 767.98px) {
