@@ -58,6 +58,14 @@ mysqli_close($conn);
 
 ?>
 
+
+<?php if (!isset($_SESSION['email'])) {
+	// Redirects to employerlogin.php
+	header('Location: employerlogin.php');
+	exit();
+}
+?>
+
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 

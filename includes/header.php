@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="assets/css/shards-extras.min.css?version=3.0.0">
   <link rel="stylesheet" href="assets/css/countrySelect.min.css">
 
+  <!-- PWA -->
   <link rel='manifest' href='./manifest.json'>
   <script>
     // Registering our Service worker

@@ -16,6 +16,9 @@ if (isset($_POST['register'])) {
 	// Gets form data
 	$studentFullName = mysqli_real_escape_string($conn, $_POST['student-fullname']);
 	$studentEmail = mysqli_real_escape_string($conn, $_POST['student-email']);
+	$studentEmail = strtolower($studentEmail); // Returns email in lowercase
+	$studentEmail = filter_var($studentEmail, FILTER_SANITIZE_EMAIL); // Removes illegal characters
+	$studentEmail = trim($studentEmail); // Removes whitespace
 	$studentLocation = mysqli_real_escape_string($conn, $_POST['student-location']);
 	$studentPassword = mysqli_real_escape_string($conn, $_POST['student-password']);
 

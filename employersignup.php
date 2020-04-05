@@ -15,8 +15,11 @@ if (isset($_POST['register'])) {
 
 	// Gets form data
 	$employerFullName = mysqli_real_escape_string($conn, $_POST['employer-fullname']);
-  $employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
-  $employerLocation = mysqli_real_escape_string($conn, $_POST['employer-location']);
+	$employerEmail = mysqli_real_escape_string($conn, $_POST['employer-email']);
+	$employerEmail = strtolower($employerEmail); // Returns email in lowercase
+	$employerEmail = filter_var($employerEmail, FILTER_SANITIZE_EMAIL); // Removes illegal characters
+	$employerEmail = trim($employerEmail); // Removes whitespace
+	$employerLocation = mysqli_real_escape_string($conn, $_POST['employer-location']);
 	$employerPassword = mysqli_real_escape_string($conn, $_POST['employer-password']);
 
 	// Hashed password

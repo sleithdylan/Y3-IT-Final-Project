@@ -43,8 +43,15 @@ function getId($email) {
 
 ?>
 
+<?php if (!isset($_SESSION['student_email'])) {
+	// Redirects to studentlogin.php
+	header('Location: studentlogin.php');
+	exit();
+}
+?>
+
 <!-- Header -->
-<?php include ('includes/header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <!-- Gets user data from id -->
 <?php if (isset($_SESSION['student_email'])) {

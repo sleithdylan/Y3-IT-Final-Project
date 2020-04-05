@@ -1,14 +1,14 @@
 -- Drop database if exists
 
--- DROP DATABASE IF EXISTS studenthired;
+DROP DATABASE IF EXISTS studenthired;
 
 -- Create database
 
--- CREATE DATABASE studenthired CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE studenthired CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Use database
 
--- USE studenthired;
+USE studenthired;
 
 -- Table Students
 

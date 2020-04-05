@@ -54,7 +54,6 @@ if (isset($_POST['login'])) {
 
 ?>
 
-
 <!-- Header -->
 <?php include('includes/header.php'); ?>
 

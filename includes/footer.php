@@ -1,3 +1,4 @@
+<!-- Footer -->
 <footer>
   <nav class="navbar-dark bg-primary">
     <div class="container py-5">
