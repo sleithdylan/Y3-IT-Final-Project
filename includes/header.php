@@ -32,6 +32,16 @@
   <link rel="stylesheet" href="assets/css/shards-extras.min.css?version=3.0.0">
   <link rel="stylesheet" href="assets/css/countrySelect.min.css">
 
+  <link rel='manifest' href='./manifest.json'>
+  <script>
+    // Registering our Service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js', {
+        scope: './'
+      })
+    }
+  </script>
+
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/1d6b99454b.js"></script>
 </head>
